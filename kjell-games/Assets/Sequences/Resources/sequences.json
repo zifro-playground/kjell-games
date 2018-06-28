@@ -1,0 +1,129 @@
+﻿{
+	"activeLevels": [
+		{
+			"sceneName": "Scene1",
+			"levelId": "IOBA1"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "IOAD1"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "CALFI"
+		}
+	],
+	"scenes": [
+		{
+			"name": "Scene1",
+			"sceneSettings": {
+				"availableFunctions": [
+					"PrintFunction",
+					"InputFunction"
+				]
+			},
+			"levels": [
+				{
+					"id": "IOBA1",
+					"levelSettings": {
+						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Kul att träffas\", svar)",
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren",
+							"body": "<b>Exempel på program:</b>\n\nP:   \"Hej!\"\nP:   \"Vad heter du?\"\nA:   \"Jonathan\"\nP:   \"Kul att träffas Jonathan\""
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Jonathan" ],
+									"output": [ "Hej!", "Kul att träffas Jonathan" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Sara" ],
+									"output": [ "Hej!", "Kul att träffas Sara" ]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": "IOAD1",
+					"levelSettings": {
+						"startCode": "svar1 = input(\"Välj första termen\")\nterm1 = int(svar1)\nsvar2 = input(\"Välj andra termen\")\nterm2 = int(svar2)\nsumma = term1 + term2\nprint(summa)",
+						"taskDescription": {
+							"header": "Skriv ett program som adderar två tal",
+							"body": "<b>Exempel på program:</b>\n\nP: \"Välj första termen\"\nA: \"5\"\nP: \"Välj andra termen\"\nA: \"7\"\nP: \"Summan är 12\""
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 1, 1 ],
+									"output": [ 2 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 123456789, 987654321 ],
+									"output": [ 1111111110 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ -3, 293 ],
+									"output": [ 290 ]
+								}
+							}
+						}
+					]
+				},
+				{
+					"id": "CALFI",
+					"levelSettings": {
+						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
+						"taskDescription": {
+							"header": "Skriv ett program som adderar två tal",
+							"body": "<b>Exempel på program:</b>\n\nP: \"Skriv första talet\"\nA: \"55\"\nP: \"Skriv andra talet\"\nA: \"13\"\nP: \"Välj räknesätt (*,/,+,-)\"\nA: \"*\"\nP: \"Resultat: 715\""
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 1, 1, "+" ],
+									"output": [ "Svar: 2" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 4, 6, "*" ],
+									"output": [ "Svar: 24" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ -10, 64, "/" ],
+									"output": [ "Svar: -0.15625" ]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
