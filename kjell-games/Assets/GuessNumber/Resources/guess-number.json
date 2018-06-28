@@ -2,15 +2,15 @@
 	"activeLevels": [
 		{
 			"sceneName": "Scene1",
-			"levelId": "IOBA1"
+			"levelId": "RND01"
 		},
 		{
 			"sceneName": "Scene1",
-			"levelId": "IOAD1"
+			"levelId": "RNDG1"
 		},
 		{
 			"sceneName": "Scene1",
-			"levelId": "CALFI"
+			"levelId": "RNDGF"
 		}
 	],
 	"scenes": [
@@ -19,17 +19,18 @@
 			"sceneSettings": {
 				"availableFunctions": [
 					"PrintFunction",
-					"InputFunction"
+					"InputFunction",
+					"RandintFunction"
 				]
 			},
 			"levels": [
 				{
-					"id": "IOBA1",
+					"id": "RND01",
 					"levelSettings": {
-						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Kul att träffas\", svar)",
+						"startCode": "slumptal = randint(1,100)\nprint(slumptal)",
 						"taskDescription": {
-							"header": "Skriv ett program som hälsar på användaren",
-							"body": "<b>Exempel på program:</b>\n\nP:   \"Hej!\"\nP:   \"Vad heter du?\"\nA:   \"Jonathan\"\nP:   \"Kul att träffas Jonathan\""
+							"header": "Skriv ut ett slumpat tal mellan 1 och 100",
+							"body": "Använd <b>randint()</b> för att slumpa talet och skriv sen ut det.\n\n<b>Exempel på program:</b>\n\nP: 77"
 						}
 					},
 					"cases": [
@@ -40,24 +41,16 @@
 									"output": [ "Hej!", "Kul att träffas Jonathan" ]
 								}
 							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ "Sara" ],
-									"output": [ "Hej!", "Kul att träffas Sara" ]
-								}
-							}
 						}
 					]
 				},
 				{
-					"id": "IOAD1",
+					"id": "RNDG1",
 					"levelSettings": {
-						"startCode": "svar1 = input(\"Välj första termen\")\nterm1 = int(svar1)\nsvar2 = input(\"Välj andra termen\")\nterm2 = int(svar2)\nsumma = term1 + term2\nprint(summa)",
+						"startCode": "rätt_svar = randint(1, 10)\nsvar = input(\"Gissa vilket tal jag tänker på\")\ngissning = int(svar)\nif gissning == rätt_svar:\n\tprint(\"Rätt\")\nelse:\n\tprint(\"Fel\")",
 						"taskDescription": {
-							"header": "Skriv ett program som adderar två tal",
-							"body": "<b>Exempel på program:</b>\n\nP: \"Välj första termen\"\nA: \"5\"\nP: \"Välj andra termen\"\nA: \"7\"\nP: \"Summan är 12\""
+							"header": "Skriv ett program som låter användaren gissa vilket tal som programmet har slumpat fram",
+							"body": "Programmet ska slumpa ett tal mellan 1 och 10, och låta användaren gissa vilket tal det är. Sen ska programmet skriva ut antingen \"Rätt\" eller \"Fel\", beroende på gissningen. \n\n<b>Exempel på program:</b>\n\nP: Gissa vilket tal jag tänker på\nA: 4\nP: Fel"
 						}
 					},
 					"cases": [
@@ -68,32 +61,16 @@
 									"output": [ 2 ]
 								}
 							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ 123456789, 987654321 ],
-									"output": [ 1111111110 ]
-								}
-							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ -3, 293 ],
-									"output": [ 290 ]
-								}
-							}
 						}
 					]
 				},
 				{
-					"id": "CALFI",
+					"id": "RNDGF",
 					"levelSettings": {
-						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
+						"startCode": "rätt_svar = randint(1, 100)\nsvar = input(\"Gissa vilket tal jag tänker på\")\ngissning = int(svar)\n\nfor i in range(10):\n\tif gissning < rätt_svar:\n\t\tprint(\"För lågt\")\n\telif gissning > rätt_svar:\n\t\tprint(\"För högt\")\n\telse:\n\t\tprint(\"Rätt\")\n\t\tbreak\n\tsvar = input(\"Gissa igen\")\n\tgissning = int(svar)",
 						"taskDescription": {
-							"header": "Skriv ett program som adderar två tal",
-							"body": "<b>Exempel på program:</b>\n\nP: \"Skriv första talet\"\nA: \"55\"\nP: \"Skriv andra talet\"\nA: \"13\"\nP: \"Välj räknesätt (*,/,+,-)\"\nA: \"*\"\nP: \"Resultat: 715\""
+							"header": "Skriv ett program som ger användaren 10 chanser att gissa vilket tal som programmet har slumpat fram",
+							"body": "Programmet ska slumpa ett tal mellan 1 och 100, och låta användaren gissa vilket tal det är. Efter varje gissning ska programmet skriva ut antingen \"För lågt\", \"För högt\" eller \"Rätt\", beroende på gissningen. Om användaren gissar rätt ska programmet avslutas.\n\n<b>Exempel på program:</b>\n\nP: Gissa vilket tal jag tänker på\nA: 27\nP: För lågt\nP: Gissa igen\nA: 80\nP: För högt\nP: Gissa igen\nA: 67\nP: Rätt"
 						}
 					},
 					"cases": [
@@ -102,22 +79,6 @@
 								"test": {
 									"input": [ 1, 1, "+" ],
 									"output": [ "Svar: 2" ]
-								}
-							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ 4, 6, "*" ],
-									"output": [ "Svar: 24" ]
-								}
-							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ -10, 64, "/" ],
-									"output": [ "Svar: -0.15625" ]
 								}
 							}
 						}
