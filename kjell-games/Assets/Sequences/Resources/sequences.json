@@ -2,15 +2,15 @@
 	"activeLevels": [
 		{
 			"sceneName": "Scene1",
-			"levelId": "IOBA1"
+			"levelId": "SEQ10"
 		},
 		{
 			"sceneName": "Scene1",
-			"levelId": "IOAD1"
+			"levelId": "IOEO1"
 		},
 		{
 			"sceneName": "Scene1",
-			"levelId": "CALFI"
+			"levelId": "SEQDX"
 		}
 	],
 	"scenes": [
@@ -24,100 +24,91 @@
 			},
 			"levels": [
 				{
-					"id": "IOBA1",
+					"id": "SEQ10",
 					"levelSettings": {
-						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Kul att träffas\", svar)",
+						"startCode": "for i in range(11):\n\tprint(i)\n",
 						"taskDescription": {
-							"header": "Skriv ett program som hälsar på användaren",
-							"body": "<b>Exempel på program:</b>\n\nP:   \"Hej!\"\nP:   \"Vad heter du?\"\nA:   \"Jonathan\"\nP:   \"Kul att träffas Jonathan\""
+							"header": "Skriv ut alla tal från 0 till 10",
+							"body": "<b>Exempel på program:</b>\n\nP: 0\nP: 1\nP: 2\n...\nP: 10"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ "Jonathan" ],
-									"output": [ "Hej!", "Kul att träffas Jonathan" ]
-								}
-							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ "Sara" ],
-									"output": [ "Hej!", "Kul att träffas Sara" ]
+									"output": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 								}
 							}
 						}
 					]
 				},
 				{
-					"id": "IOAD1",
+					"id": "IOEO1",
 					"levelSettings": {
-						"startCode": "svar1 = input(\"Välj första termen\")\nterm1 = int(svar1)\nsvar2 = input(\"Välj andra termen\")\nterm2 = int(svar2)\nsumma = term1 + term2\nprint(summa)",
+						"startCode": "svar = input(\"Skriv ett tal\")\ntal = int(svar)\nkvot = tal/2\nif kvot == round(kvot):\n\tprint(tal, \"är ett jämnt tal\")\nelse:\n\tprint(tal, \"är ett udda tal\")",
 						"taskDescription": {
-							"header": "Skriv ett program som adderar två tal",
-							"body": "<b>Exempel på program:</b>\n\nP: \"Välj första termen\"\nA: \"5\"\nP: \"Välj andra termen\"\nA: \"7\"\nP: \"Summan är 12\""
+							"header": "Skriv ett program som kollar om ett tal är jämt eller udda",
+							"body": "Programmet ska fråga användaren om ett tal, och sen skriva ut om det talet är udda eller jämnt.\n\n<b>Exempel på program:</b>\n\nP: Skriv ett tal\nA: 5\nP: 5 är ett udda tal"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ 1, 1 ],
-									"output": [ 2 ]
+									"input": [ 2 ],
+									"output": [ "2 är ett jämnt tal" ]
 								}
 							}
 						},
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ 123456789, 987654321 ],
-									"output": [ 1111111110 ]
+									"input": [ 13 ],
+									"output": [ "13 är ett udda tal" ]
 								}
 							}
 						},
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ -3, 293 ],
-									"output": [ 290 ]
+									"input": [ -2874123 ],
+									"output": [ "-2874123 är ett udda tal" ]
 								}
 							}
 						}
 					]
 				},
 				{
-					"id": "CALFI",
+					"id": "SEQDX",
 					"levelSettings": {
-						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
+						"startCode": "svar = input(\"Skriv talet att kolla delbarhet med\")\nnämnare = int(svar)\nfor i in range(21): \n\tkvot = i/nämnare\n\tif kvot == round(kvot):\n\t\tprint(i)",
 						"taskDescription": {
-							"header": "Skriv ett program som adderar två tal",
-							"body": "<b>Exempel på program:</b>\n\nP: \"Skriv första talet\"\nA: \"55\"\nP: \"Skriv andra talet\"\nA: \"13\"\nP: \"Välj räknesätt (*,/,+,-)\"\nA: \"*\"\nP: \"Resultat: 715\""
+							"header": "Skriv ut alla tal mellan 0 och 20 som är jämnt delbara med ett tal som användaren väljer",
+							"body": "Användaren ska välja ett tal, och sen ska programmet skriva ut alla tal mellan 0 och 20 som går att dela jämnt med talet som användaren valde.\n\n<b>Exempel på program:</b>\n\nP: Skriv talet att kolla delabarhet med\nA: 3\nP: 0\nP: 3\nP: 6\nP: 9\n...\nP: 18"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ 1, 1, "+" ],
-									"output": [ "Svar: 2" ]
+									"input": [ 2 ],
+									"output": [ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
 								}
 							}
 						},
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ 4, 6, "*" ],
-									"output": [ "Svar: 24" ]
+									"input": [ 3 ],
+									"output": [ 0, 3, 6, 9, 12, 15, 18 ]
 								}
 							}
 						},
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ -10, 64, "/" ],
-									"output": [ "Svar: -0.15625" ]
+									"input": [ 7 ],
+									"output": [ 0, 7, 14 ]
 								}
 							}
 						}
