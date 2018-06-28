@@ -101,7 +101,7 @@
 							"caseDefinition": {
 								"test": {
 									"input": [ 1, 1, "+" ],
-									"output": [ "Svar: 2" ]
+									"output": [ "Resultat: 2" ]
 								}
 							}
 						},
@@ -109,15 +109,15 @@
 							"caseDefinition": {
 								"test": {
 									"input": [ 4, 6, "*" ],
-									"output": [ "Svar: 24" ]
+									"output": [ "Resultat: 24" ]
 								}
 							}
 						},
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ -10, 64, "/" ],
-									"output": [ "Svar: -0.15625" ]
+									"input": [ 87, 64, "/" ],
+									"output": [ "Resultat: 1.359375" ]
 								}
 							}
 						}
