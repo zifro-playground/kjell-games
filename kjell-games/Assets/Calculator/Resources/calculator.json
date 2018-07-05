@@ -92,11 +92,13 @@
 					"levelSettings": {
 						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
 						"taskDescription": {
-							"header": "Skriv ett program som adderar två tal",
+							"header": "Gör en miniräknare, som kan räkna med de fyra räknesätten",
 							"body": "<b>Exempel på program:</b>\n\nP: \"Skriv första talet\"\nA: \"55\"\nP: \"Skriv andra talet\"\nA: \"13\"\nP: \"Välj räknesätt (*,/,+,-)\"\nA: \"*\"\nP: \"Resultat: 715\""
 						}
 					},
 					"cases": [
+						{
+						},
 						{
 							"caseDefinition": {
 								"test": {

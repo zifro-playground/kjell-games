@@ -32,17 +32,7 @@
 							"header": "Skriv ut ett slumpat tal mellan 1 och 100",
 							"body": "Använd <b>randint()</b> för att slumpa talet och skriv sen ut det.\n\n<b>Exempel på program:</b>\n\nP: 77"
 						}
-					},
-					"cases": [
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ "Jonathan" ],
-									"output": [ "Hej!", "Kul att träffas Jonathan" ]
-								}
-							}
-						}
-					]
+					}
 				},
 				{
 					"id": "RNDG1",
@@ -52,17 +42,7 @@
 							"header": "Skriv ett program som låter användaren gissa vilket tal som programmet har slumpat fram",
 							"body": "Programmet ska slumpa ett tal mellan 1 och 10, och låta användaren gissa vilket tal det är. Sen ska programmet skriva ut antingen \"Rätt\" eller \"Fel\", beroende på gissningen. \n\n<b>Exempel på program:</b>\n\nP: Gissa vilket tal jag tänker på\nA: 4\nP: Fel"
 						}
-					},
-					"cases": [
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ 1, 1 ],
-									"output": [ 2 ]
-								}
-							}
-						}
-					]
+					}
 				},
 				{
 					"id": "RNDGF",
@@ -72,17 +52,7 @@
 							"header": "Skriv ett program som ger användaren 10 chanser att gissa vilket tal som programmet har slumpat fram",
 							"body": "Programmet ska slumpa ett tal mellan 1 och 100, och låta användaren gissa vilket tal det är. Efter varje gissning ska programmet skriva ut antingen \"För lågt\", \"För högt\" eller \"Rätt\", beroende på gissningen. Om användaren gissar rätt ska programmet avslutas.\n\n<b>Exempel på program:</b>\n\nP: Gissa vilket tal jag tänker på\nA: 27\nP: För lågt\nP: Gissa igen\nA: 80\nP: För högt\nP: Gissa igen\nA: 67\nP: Rätt"
 						}
-					},
-					"cases": [
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ 1, 1, "+" ],
-									"output": [ "Svar: 2" ]
-								}
-							}
-						}
-					]
+					}
 				}
 			]
 		}
