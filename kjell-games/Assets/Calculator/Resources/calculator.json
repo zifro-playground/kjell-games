@@ -2,10 +2,6 @@
 	"activeLevels": [
 		{
 			"sceneName": "Scene1",
-			"levelId": "IOBA1"
-		},
-		{
-			"sceneName": "Scene1",
 			"levelId": "IOAD1"
 		},
 		{
@@ -23,36 +19,7 @@
 				]
 			},
 			"levels": [
-				{
-					"id": "IOBA1",
-					"levelSettings": {
-						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Kul att träffas\", svar)",
-						"taskDescription": {
-							"header": "Skriv ett program som hälsar på användaren",
-							"body": "<b>Exempel på program:</b>\n\nP:   \"Hej!\"\nP:   \"Vad heter du?\"\nA:   \"Jonathan\"\nP:   \"Kul att träffas Jonathan\""
-						}
-					},
-					"cases": [
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ "Jonathan" ],
-									"output": [ "Hej!", "Kul att träffas Jonathan" ]
-								}
-							}
-						},
-						{
-							"caseDefinition": {
-								"test": {
-									"input": [ "Sara" ],
-									"output": [ "Hej!", "Kul att träffas Sara" ]
-								}
-							}
-						}
-					]
-				},
-				{
-					"id": "IOAD1",
+				{   "id": "IOAD1",
 					"levelSettings": {
 						"startCode": "svar1 = input(\"Välj första termen\")\nterm1 = int(svar1)\nsvar2 = input(\"Välj andra termen\")\nterm2 = int(svar2)\nsumma = term1 + term2\nprint(summa)",
 						"taskDescription": {
@@ -87,8 +54,7 @@
 						}
 					]
 				},
-				{
-					"id": "CALFI",
+				{   "id": "CALFI",
 					"levelSettings": {
 						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
 						"taskDescription": {

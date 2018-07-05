@@ -1,0 +1,254 @@
+﻿{
+	"activeLevels": [
+        {
+            "sceneName": "Scene1",
+            "levelId": "OBAE1"
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "OBAE2"
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "O1AR1"
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "O2AR1"
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "O3AR1"
+        },
+		{
+			"sceneName": "Scene1",
+			"levelId": "IOBA1"
+		}
+	],
+	"scenes": [
+		{
+			"name": "Scene1",
+			"sceneSettings": {
+				"availableFunctions": [
+					"PrintFunction",
+					"InputFunction"
+				]
+			},
+			"levels": [
+                {   "id": "OBAE1",
+                    "guideBubbles": [
+						{
+							"target": "1",
+							"text": "Den här raden kommer att skriva ut \"Hej!\" i fönstret till höger."
+                        },
+                        {
+							"target": "play",
+							"text": "Testa att köra koden!"
+						}
+					],
+					"levelSettings": {
+						"startCode": "print(\"Hej!\")",
+						"taskDescription": {
+							"header": "Skriv ett program som skriver ut \"Hej!\" ",
+							"body": "<b>Resultat:</b> \n\nP:   \"Hej!\""
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ "Hej!" ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "OBAE2",
+                    "guideBubbles": [
+						{
+							"target": "1",
+							"text": "Testa att skriva ut något annat. Fyll i det du vill skriva mellan <b>\"\"</b>."
+						}
+					],
+					"levelSettings": {
+						"startCode": "print(\"\")",
+						"taskDescription": {
+							"header": "Skriv ett program som skriver ut en valfri hälsning.",
+							"body": "<b>Resultat (exempel):</b>\n\nP:   \"Heeeeello!\""
+						}
+					},
+					"cases": []
+                },
+                {   "id": "O1AR1",
+                    "guideBubbles": [
+						{
+							"target": "1",
+							"text": "Här skapar vi en variabel som innehåller en hälsning."
+                        },
+                        {
+                            "target": "2",
+                            "text": "Den här raden skriver ut hälsningen"
+                        },
+                        {
+                            "target": "play",
+                            "text": "Testa att köra koden!"
+                        }
+					],
+					"levelSettings": {
+						"startCode": "print(hälsning)",
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren.",
+                            "body": "Skriv ut hälsningen som du får i variabeln <b>hälsning</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hejsan!\""
+						}
+					},
+					"cases": [
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Hejsan!\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hejsan!" ]
+								}
+							}
+                        },
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Tjabba tjena!\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Tjabba tjena!" ]
+								}
+							}
+						},
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"HEEEEEEJSAAAAAAN!!!\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "HEEEEEEJSAAAAAAN!!!" ]
+								}
+							}
+						}
+                    ]
+                },
+                {   "id": "O2AR1",
+                    "guideBubbles": [
+						{
+							"target": "3",
+							"text": "Det går att kombinera flera saker i en <b>print</b>. Använd komma mellan varje sak du vill skriva ut."
+                        }
+					],
+					"levelSettings": {
+						"startCode": "print(hälsning, namn)",
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren med namn.",
+                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Sara\""
+						}
+					},
+					"cases": [
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Hej\"\nnamn = \"Sara\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hej Sara" ]
+								}
+							}
+                        },
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Hej\"\nnamn = \"Majsan\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hej Majsan" ]
+								}
+							}
+						},
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Hejsan\"\nnamn=\"Majsan\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hejsan Majsan" ]
+								}
+							}
+						}
+                    ]
+                },
+                {   "id": "O3AR1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren med namn.",
+                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Sara!\""
+						}
+					},
+					"cases": [
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Tjo\"\nnamn = \"Harry\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Tjo Harry !" ]
+								}
+							}
+                        },
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Hello\"\nnamn = \"Mark\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hello Mark !" ]
+								}
+							}
+						}
+                    ]
+                },
+                {   "id": "IOBA1",
+                    "guideBubbles": [
+						{
+							"target": "2",
+							"text": "Vi kan ställa frågor till annvändaren med hjälp av <b>input</b>."
+                        },
+                        {
+							"target": "2",
+							"text": "Användarens svar sparar vi sen i variabeln <b>svar</b>, för att kunna använda det senare."
+                        }
+					],
+					"levelSettings": {
+						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Hej på dig\", svar)",
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren",
+							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   \"Hej!\"\nP:   \"Vad heter du?\"\nA:   \"Jonathan\"\nP:   \"Hej på dig Jonathan\""
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Jonathan" ],
+									"output": [ "Hej!", "Hej på dig Jonathan" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Sara" ],
+									"output": [ "Hej!", "Hej på dig Sara" ]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
