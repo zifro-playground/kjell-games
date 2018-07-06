@@ -17,13 +17,13 @@
             "levelId": "O2AR1"
         },
         {
-            "sceneName": "Scene1",
-            "levelId": "O3AR1"
-        },
-		{
 			"sceneName": "Scene1",
 			"levelId": "IOBA1"
-		}
+		},
+        {
+            "sceneName": "Scene1",
+            "levelId": "O3AR1"
+        }
 	],
 	"scenes": [
 		{
