@@ -165,31 +165,36 @@ Prefab:
     - target: {fileID: 20172421776739504, guid: 96efdaeae3d961445bf2cfba92b2046b,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.x
-      value: 0.500625
+      value: 0.500467
       objectReference: {fileID: 0}
     - target: {fileID: 20172421776739504, guid: 96efdaeae3d961445bf2cfba92b2046b,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.y
-      value: 0.14552093
+      value: 0.1365447
       objectReference: {fileID: 0}
     - target: {fileID: 20172421776739504, guid: 96efdaeae3d961445bf2cfba92b2046b,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.width
-      value: 0.4474998
+      value: 0.3343929
       objectReference: {fileID: 0}
     - target: {fileID: 20172421776739504, guid: 96efdaeae3d961445bf2cfba92b2046b,
         type: 2}
       propertyPath: m_NormalizedViewPortRect.height
-      value: 0.6675403
+      value: 0.6844442
       objectReference: {fileID: 0}
     - target: {fileID: 224212930359447024, guid: 96efdaeae3d961445bf2cfba92b2046b,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -152.81297
+      value: -102.81502
       objectReference: {fileID: 0}
     - target: {fileID: 224212930359447024, guid: 96efdaeae3d961445bf2cfba92b2046b,
         type: 2}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224503612387640476, guid: 96efdaeae3d961445bf2cfba92b2046b,
+        type: 2}
+      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -302,17 +307,17 @@ Prefab:
     - target: {fileID: 224345876596634616, guid: e71ef7505f1db2a49b3b52020dd99425,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0.000030517578
+      value: -0.000030517578
       objectReference: {fileID: 0}
     - target: {fileID: 224345876596634616, guid: e71ef7505f1db2a49b3b52020dd99425,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000076293945
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 224725038394596746, guid: e71ef7505f1db2a49b3b52020dd99425,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0.00021362305
+      value: -0.00008392334
       objectReference: {fileID: 0}
     - target: {fileID: 224181667245211008, guid: e71ef7505f1db2a49b3b52020dd99425,
         type: 2}
@@ -572,7 +577,7 @@ Prefab:
     - target: {fileID: 114190929490946114, guid: e71ef7505f1db2a49b3b52020dd99425,
         type: 2}
       propertyPath: GameDataFileName
-      value: intro
+      value: chatbot
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e71ef7505f1db2a49b3b52020dd99425, type: 2}

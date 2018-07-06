@@ -17,13 +17,21 @@
             "levelId": "O2AR1"
         },
         {
+            "sceneName": "Scene1",
+            "levelId": "O2AR2"
+        },
+        {
 			"sceneName": "Scene1",
 			"levelId": "IOBA1"
-		},
+        },
         {
-            "sceneName": "Scene1",
-            "levelId": "O3AR1"
-        }
+			"sceneName": "Scene1",
+			"levelId": "IOBA2"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "IOBA3"
+		}
 	],
 	"scenes": [
 		{
@@ -49,7 +57,7 @@
 					"levelSettings": {
 						"startCode": "print(\"Hej!\")",
 						"taskDescription": {
-							"header": "Skriv ett program som skriver ut \"Hej!\" ",
+							"header": "Skriv ett program som skriver ut \"Hej!\".",
 							"body": "<b>Resultat:</b> \n\nP:   \"Hej!\""
 						}
 					},
@@ -87,15 +95,10 @@
                         },
                         {
                             "target": "2",
-                            "text": "Den här raden skriver ut hälsningen"
-                        },
-                        {
-                            "target": "play",
-                            "text": "Testa att köra koden!"
+                            "text": "Skriv ut hälsningen!"
                         }
 					],
 					"levelSettings": {
-						"startCode": "print(hälsning)",
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren.",
                             "body": "Skriv ut hälsningen som du får i variabeln <b>hälsning</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hejsan!\""
@@ -181,31 +184,41 @@
 						}
                     ]
                 },
-                {   "id": "O3AR1",
+                {   "id": "O2AR2",
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn.",
-                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Sara!\""
+                            "body": "Använd namnet som du får i variabeln \"namn\".\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Lana\""
 						}
 					},
 					"cases": [
                         {
                             "caseSettings": {
-								"precode": "hälsning = \"Tjo\"\nnamn = \"Harry\""
+								"precode": "namn = \"Lana\""
 							},
                             "caseDefinition": {
 								"test": {
-									"output": [ "Tjo Harry !" ]
+									"output": [ "Hej Lana" ]
 								}
 							}
                         },
                         {
                             "caseSettings": {
-								"precode": "hälsning = \"Hello\"\nnamn = \"Mark\""
+								"precode": "namn = \"Aiman\""
 							},
                             "caseDefinition": {
 								"test": {
-									"output": [ "Hello Mark !" ]
+									"output": [ "Hej Aiman" ]
+								}
+							}
+						},
+                        {
+                            "caseSettings": {
+								"precode": "namn = \"Anastasia\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hej Anastasia" ]
 								}
 							}
 						}
@@ -220,6 +233,10 @@
                         {
 							"target": "2",
 							"text": "Användarens svar sparar vi sen i variabeln <b>svar</b>, för att kunna använda det senare."
+                        },
+                        {
+							"target": "play",
+							"text": "Testa att köra koden!"
                         }
 					],
 					"levelSettings": {
@@ -247,7 +264,99 @@
 							}
 						}
 					]
-				}
+                },
+                {   "id": "IOBA2",
+                    "guideBubbles": [],
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren och frågar användaren hur den mår.",
+							"body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   \"Hej!\"\nP:   \"Hur mår du?\"\nA:   \"Ganska bra\"\nP:   \"Vad kul att du mår Ganska bra\""
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+                                    "input": [ "Ganska bra" ],
+									"output": [ "Hej!", "Vad kul att du mår Ganska bra" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Kanonbra" ],
+									"output": [ "Hej!", "Vad kul att du mår Kanonbra" ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "IOBA3",
+                    "guideBubbles": [],
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren och frågar användaren hur den mår.",
+							"body": "Om användaren svarar \"Dåligt\" ska du säga \"Hoppas du mår bättre imorgon!\", annars ska du skriva \"Vad kul att du mår...\". När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   \"Hej!\"\nP:   \"Hur mår du?\"\nA:   \"Dåligt\"\nP:   \"Hoppas du mår bättre imorgon!\" \n\n Tips: Använd if-satser."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+                                    "input": [ "Kanonbra" ],
+									"output": [ "Hej!", "Vad kul att du mår Kanonbra" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Dåligt" ],
+									"output": [ "Hej!", "Hoppas du mår bättre imorgon!" ]
+								}
+							}
+                        },
+                        {
+							"caseDefinition": {
+								"test": {
+                                    "input": [ "Bra" ],
+									"output": [ "Hej!", "Vad kul att du mår Bra" ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "O3AR1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren med namn och utropstecken.",
+                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Sara!\""
+						}
+					},
+					"cases": [
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Tjo\"\nnamn = \"Harry\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Tjo Harry !" ]
+								}
+							}
+                        },
+                        {
+                            "caseSettings": {
+								"precode": "hälsning = \"Hello\"\nnamn = \"Mark\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hello Mark !" ]
+								}
+							}
+						}
+                    ]
+                }
 			]
 		}
 	]
