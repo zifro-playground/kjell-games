@@ -31,7 +31,19 @@
         {
 			"sceneName": "Scene1",
 			"levelId": "IOBA3"
-		}
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "O3AR1"
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "IOBO1"
+        },
+        {
+            "sceneName": "Scene1",
+            "levelId": "IOBO2"
+        }
 	],
 	"scenes": [
 		{
@@ -58,7 +70,7 @@
 						"startCode": "print(\"Hej!\")",
 						"taskDescription": {
 							"header": "Skriv ett program som skriver ut \"Hej!\".",
-							"body": "<b>Resultat:</b> \n\nP:   \"Hej!\""
+							"body": "<b>Resultat:</b> \n\nP:   Hej!"
 						}
 					},
 					"cases": [
@@ -82,7 +94,7 @@
 						"startCode": "print(\"\")",
 						"taskDescription": {
 							"header": "Skriv ett program som skriver ut en valfri hälsning.",
-							"body": "<b>Resultat (exempel):</b>\n\nP:   \"Heeeeello!\""
+							"body": "<b>Resultat (exempel):</b>\n\nP:   Heeeeello!"
 						}
 					},
 					"cases": []
@@ -101,7 +113,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren.",
-                            "body": "Skriv ut hälsningen som du får i variabeln <b>hälsning</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hejsan!\""
+                            "body": "Skriv ut hälsningen som du får i variabeln <b>hälsning</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   Hejsan!"
 						}
 					},
 					"cases": [
@@ -148,7 +160,7 @@
 						"startCode": "print(hälsning, namn)",
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn.",
-                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Sara\""
+                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Sara"
 						}
 					},
 					"cases": [
@@ -174,7 +186,7 @@
 						},
                         {
                             "caseSettings": {
-								"precode": "hälsning = \"Hejsan\"\nnamn=\"Majsan\""
+								"precode": "hälsning = \"Hejsan\"\nnamn = \"Majsan\""
 							},
                             "caseDefinition": {
 								"test": {
@@ -188,7 +200,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn.",
-                            "body": "Använd namnet som du får i variabeln \"namn\".\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Lana\""
+                            "body": "Använd namnet som du får i variabeln \"namn\".\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Lana"
 						}
 					},
 					"cases": [
@@ -243,7 +255,7 @@
 						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Hej på dig\", svar)",
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren",
-							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   \"Hej!\"\nP:   \"Vad heter du?\"\nA:   \"Jonathan\"\nP:   \"Hej på dig Jonathan\""
+							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Vad heter du?\nA:   Jonathan\nP:   Hej på dig Jonathan"
 						}
 					},
 					"cases": [
@@ -270,7 +282,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren och frågar användaren hur den mår.",
-							"body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   \"Hej!\"\nP:   \"Hur mår du?\"\nA:   \"Ganska bra\"\nP:   \"Vad kul att du mår Ganska bra\""
+							"body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Ganska bra\nP:   Vad kul att du mår Ganska bra"
 						}
 					},
 					"cases": [
@@ -289,6 +301,14 @@
 									"output": [ "Hej!", "Vad kul att du mår Kanonbra" ]
 								}
 							}
+                        },
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Sådär" ],
+									"output": [ "Hej!", "Vad kul att du mår Sådär" ]
+								}
+							}
 						}
 					]
                 },
@@ -297,7 +317,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren och frågar användaren hur den mår.",
-							"body": "Om användaren svarar \"Dåligt\" ska du säga \"Hoppas du mår bättre imorgon!\", annars ska du skriva \"Vad kul att du mår...\". När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   \"Hej!\"\nP:   \"Hur mår du?\"\nA:   \"Dåligt\"\nP:   \"Hoppas du mår bättre imorgon!\" \n\n Tips: Använd if-satser."
+							"body": "Om användaren svarar \"Dåligt\" ska du säga \"Vad tråkigt att du mår Dåligt\", annars ska du skriva \"Vad kul att du mår...\". När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Dåligt\nP:   Vad tråkigt att du mår Dåligt \n\n Tips: Använd if-satser."
 						}
 					},
 					"cases": [
@@ -313,7 +333,7 @@
 							"caseDefinition": {
 								"test": {
 									"input": [ "Dåligt" ],
-									"output": [ "Hej!", "Hoppas du mår bättre imorgon!" ]
+									"output": [ "Hej!", "Vad tråkigt att du mår Dåligt" ]
 								}
 							}
                         },
@@ -331,7 +351,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn och utropstecken.",
-                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   \"Hej Sara!\""
+                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Sara!"
 						}
 					},
 					"cases": [
@@ -352,6 +372,74 @@
                             "caseDefinition": {
 								"test": {
 									"output": [ "Hello Mark !" ]
+								}
+							}
+						}
+                    ]
+                },
+                {   "id": "IOBO1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som frågar användaren vad den åt till frukost.",
+                            "body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Havregrynsgröt\nP:   Åh vad gott! Jag åt också Havregrynsgröt idag!"
+						}
+					},
+					"cases": [
+                        {
+                            "caseDefinition": {
+								"test": {
+                                    "input": [ "Havregrynsgröt" ],
+									"output": [ "Vad gott! Jag åt också Havregrynsgröt idag!" ]
+								}
+							}
+                        },
+                        {
+                            "caseDefinition": {
+								"test": {
+                                    "input": [ "Mackor med jordnötssmör och lingonsylt" ],
+									"output": [ "Vad gott! Jag åt också Mackor med jordnötssmör och lingonsylt idag!" ]
+								}
+							}
+						},
+                        {
+                            "caseDefinition": {
+								"test": {
+                                    "input": [ "3 knäckebröd med ägg" ],
+									"output": [ "Vad gott! Jag åt också 3 knäckebröd med ägg idag!" ]
+								}
+							}
+						}
+                    ]
+                },
+                {   "id": "IOBO2",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som frågar användaren vad den åt till frukost.",
+                            "body": "Om användaren skriver \"inget\" ska programmet svara \":-(\", annars ska du svara som tidigare \"Vad gott! Jag åt också ... idag!\" När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Inget\nP:   :-("
+						}
+					},
+					"cases": [
+                        {
+                            "caseDefinition": {
+								"test": {
+                                    "input": [ "Havregrynsgröt" ],
+									"output": [ "Vad gott! Jag åt också Havregrynsgröt idag!" ]
+								}
+							}
+                        },
+                        {
+                            "caseDefinition": {
+								"test": {
+                                    "input": [ "Inget" ],
+									"output": [ ":-(" ]
+								}
+							}
+						},
+                        {
+                            "caseDefinition": {
+								"test": {
+                                    "input": [ "5 mackor med ost" ],
+									"output": [ "Vad gott! Jag åt också 5 mackor med ost idag!" ]
 								}
 							}
 						}
