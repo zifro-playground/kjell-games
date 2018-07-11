@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using Compiler;
 using PM;
 using UnityEngine;
 
 
 namespace Kjell
 {
-	public class IOStream : MonoBehaviour, IPMCompilerStarted, IPMLevelChanged, IPMCompilerStopped, IPMLineParsed, IPMActivateWalker
+	public class IOStream : MonoBehaviour, IPMCompilerStarted, IPMLevelChanged, IPMCompilerStopped//, IPMLineParsed, IPMActivateWalker
 	{
 		public string LatestReadInput;
 
@@ -24,8 +22,6 @@ namespace Kjell
 
 		private GameObject labelObject;
 		private GameObject valueObject;
-
-		private Coroutine couroutine;
 
 		public Dictionary<int, string> LinesWithInput;
 
@@ -48,32 +44,17 @@ namespace Kjell
 			output.Text.text = message;
 		}
 
-		public IEnumerator CallInput(int lineNumber)
-		{
-			yield return new WaitForSeconds(PMWrapper.walkerStepTime * (1 - PMWrapper.speedMultiplier));
-
-			if (!PMWrapper.IsCompilerRunning)
-				yield break;
-
-			IDELineMarker.SetWalkerPosition(lineNumber + 1);
-			if (!LinesWithInput.ContainsKey(lineNumber))
-				throw new Exception("There is no input on line " + lineNumber);
-
-			var argument = InputParser.InterpretArgument(LinesWithInput[lineNumber]);
-			TriggerInput(argument);
-		}
-
-		public void TriggerInput(string message)
+		public IEnumerator TriggerInput(string message)
 		{
 			labelObject = Instantiate(LabelPrefab);
-			valueObject = Instantiate(ValuePrefab);
-
 			labelObject.transform.SetParent(gameObject.transform, false);
-			valueObject.transform.SetParent(gameObject.transform, false);
-
 			labelObject.GetComponent<InputLabel>().Text.text = message;
-
 			labelObject.GetComponent<InputLabel>().BubbleImage.sprite = InputLabelPop;
+
+			yield return new WaitForSeconds(2 * (1 - PMWrapper.speedMultiplier));
+
+			valueObject = Instantiate(ValuePrefab);
+			valueObject.transform.SetParent(gameObject.transform, false);
 			valueObject.GetComponent<InputValue>().BubbleImage.sprite = InputValuePop;
 
 			CaseCorrection.NextInput(valueObject);
@@ -82,8 +63,14 @@ namespace Kjell
 		public void InputSubmitted(string submitedText)
 		{
 			LatestReadInput = submitedText;
-			labelObject.GetComponent<InputLabel>().BubbleImage.sprite = InputLabelPlain;
+
+			if (labelObject != null)
+				labelObject.GetComponent<InputLabel>().BubbleImage.sprite = InputLabelPlain;
+
 			valueObject.GetComponent<InputValue>().BubbleImage.sprite = InputValuePlain;
+
+			CodeWalker.SubmitInput.Invoke(submitedText, CodeWalker.CurrentScope);
+			PMWrapper.UnpauseWalker();
 		}
 
 		private void Clear()
@@ -94,52 +81,31 @@ namespace Kjell
 			}
 		}
 
-		private void SubmitLastInput()
+		private void DeactivateLastInput()
 		{
 			if (gameObject.transform.childCount > 0)
 			{
 				var inputValue = gameObject.transform.GetChild(gameObject.transform.childCount - 1).gameObject.GetComponent<InputValue>();
 				if (inputValue != null)
-					inputValue.SubmitInput();
+					inputValue.DeactivateInputValue();
 			}
 		}
 
 		public void OnPMCompilerStarted()
 		{
 			Clear();
-			LinesWithInput = InputParser.FindInputInCode(PMWrapper.fullCode);
 		}
 
 		public void OnPMLevelChanged()
 		{
-			SubmitLastInput();
+			DeactivateLastInput();
 			Clear();
 		}
 
 		public void OnPMCompilerStopped(HelloCompiler.StopStatus status)
 		{
-			SubmitLastInput();
-
-			if (couroutine != null)
-				StopCoroutine(couroutine);
-		}
-
-		public void OnPMLineParsed()
-		{
-			if (LinesWithInput.ContainsKey(PMWrapper.CurrentLineNumber + 1))
-			{
-				couroutine = StartCoroutine(CallInput(PMWrapper.CurrentLineNumber + 1));
-				PMWrapper.IsWaitingForUserInput = true;
-			}
-		}
-
-		public void OnPMActivateWalker()
-		{
-			if (LinesWithInput.ContainsKey(0))
-			{
-				couroutine = StartCoroutine(CallInput(0));
-				PMWrapper.IsWaitingForUserInput = true;
-			}
+			DeactivateLastInput();
+			StopAllCoroutines();
 		}
 	}
 }
