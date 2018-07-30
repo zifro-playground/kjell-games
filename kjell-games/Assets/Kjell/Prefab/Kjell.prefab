@@ -207,10 +207,10 @@ Camera:
   m_BackGroundColor: {r: 0.2509191, g: 0.28676468, b: 0.28676468, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.500625
-    y: 0.16063833
-    width: 0.4475
-    height: 0.63907194
+    x: 0.50083184
+    y: 0.1365447
+    width: 0.44768494
+    height: 0.6844442
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 114038097317685784}
   m_HandleRect: {fileID: 224503612387640476}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -631,7 +631,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10, y: -152.81308}
+  m_AnchoredPosition: {x: 10, y: -152.73126}
   m_SizeDelta: {x: 475, y: 0}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!224 &224458726784665658

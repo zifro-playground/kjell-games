@@ -152,12 +152,6 @@ public static class PMWrapper
 	/// </summary>
 	public static bool IsCompilerUserPaused { get { return UISingleton.instance.walker.IsUserPaused; } }
 
-	public static bool IsWaitingForUserInput
-	{
-		get { return CodeWalker.IsWaitingForInput; }
-		set { CodeWalker.IsWaitingForInput = value; }
-	}
-
 	/// <summary>
 	/// Starts the compiler if it's not currently running. Static wrapper for <see cref="HelloCompiler.compileCode"/>
 	/// </summary>
@@ -171,9 +165,7 @@ public static class PMWrapper
 	/// </summary>
 	public static void RunCode()
 	{
-		Main.Instance.CaseHandler.AllCasesCompleted = false;
-		Main.Instance.CaseHandler.ResetHandlerAndButtons();
-		Main.Instance.CaseHandler.RunCase(0);
+		LevelModeController.Instance.RunProgram();
 	}
 
 	/// <summary>
