@@ -1,12 +1,32 @@
 ﻿{
 	"activeLevels": [
+        {
+            "sceneName": "Scene1",
+            "levelId": "OAD01"
+        },
 		{
 			"sceneName": "Scene1",
 			"levelId": "IOAD1"
 		},
 		{
 			"sceneName": "Scene1",
+			"levelId": "IOKV1"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "IODI1"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "CAL01"
+		},
+		{
+			"sceneName": "Scene1",
 			"levelId": "CALFI"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "CALFX"
 		}
 	],
 	"scenes": [
@@ -19,12 +39,51 @@
 				]
 			},
 			"levels": [
-				{   "id": "IOAD1",
+                {   "id": "OAD01" ,
 					"levelSettings": {
-						"startCode": "svar1 = input(\"Välj första termen\")\nterm1 = int(svar1)\nsvar2 = input(\"Välj andra termen\")\nterm2 = int(svar2)\nsumma = term1 + term2\nprint(summa)",
 						"taskDescription": {
-							"header": "Skriv ett program som adderar två tal",
-							"body": "<b>Exempel på program:</b>\n\nP: \"Välj första termen\"\nA: \"5\"\nP: \"Välj andra termen\"\nA: \"7\"\nP: \"Summan är 12\""
+							"header": "Skriv ett program som adderar variablerna x och y och skriver ut summan",
+							"body": "Använd variablerna <b>x</b> och <b>y</b>. \n\n<b>Exempel på program:</b>\n\nP: 238992"
+						}
+					},
+					"cases": [
+						{
+                            "caseSettings":{
+                                "precode": "x = 22534\ny=982"
+                            },
+							"caseDefinition": {
+								"test": {
+									"output": [ 23516 ]
+								}
+							}
+						},
+						{
+                            "caseSettings":{
+                                "precode": "x = 285\ny=13033"
+                            },
+                            "caseDefinition": {
+								"test": {
+									"output": [ 13318 ]
+								}
+							}
+						},
+						{
+                            "caseSettings":{
+                                "precode": "x = 9834098\ny=23809384"
+                            },
+                            "caseDefinition": {
+								"test": {
+									"output": [ 33643482 ]
+								}
+							}
+						}
+					]
+				},
+                {   "id": "IOAD1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som adderar två tal som användaren skriver in och skriver ut summan.",
+							"body": "Progammet ska be användaren om två tal, och sen skriva ut summan. \n\n<b>Exempel på program:</b>\n\nP: Välj första termen\nA: 5\nP: Välj andra termen\nA: 7\nP: 12"
 						}
 					},
 					"cases": [
@@ -53,13 +112,81 @@
 							}
 						}
 					]
-				},
-				{   "id": "CALFI",
+                },
+                {   "id": "IOKV1",
 					"levelSettings": {
-						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
 						"taskDescription": {
-							"header": "Gör en miniräknare, som kan räkna med de fyra räknesätten",
-							"body": "<b>Exempel på program:</b>\n\nP: \"Skriv första talet\"\nA: \"55\"\nP: \"Skriv andra talet\"\nA: \"13\"\nP: \"Välj räknesätt (*,/,+,-)\"\nA: \"*\"\nP: \"Resultat: 715\""
+							"header": "Skriv ett program som kvadrerar ett tal som användaren matar in och skriver ut kvadraten.",
+							"body": "Progammet ska be användaren ett tal och skriva ut kvadraten av det talet. \n\n<b>Exempel på program:</b>\n\nP: Välj tal\nA: 5\nP: 25"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 7 ],
+									"output": [ 49 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 21 ],
+									"output": [ 441 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 3 ],
+									"output": [ 9 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "IODI1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som dividerar två tal som användaren skriver in.",
+							"body": "Progammet ska be användaren om två tal, och sen skriva ut kvoten. <b>OBS!</b> Om det andra talet som användaren skriver in (nämnaren) är <b>0</b>, så ska programmet skriva ut \"Man kan inte dividera med noll.\". \n\n<b>Exempel på program:</b>\n\nP: Välj första talet\nA: 5897\nP: Välj andra talet\nA: 0\nP: Man kan inte dividera med noll.\n\n Tips: Använd en if-sats för att kolla om andra talet är 0."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 5934, 2 ],
+									"output": [ 2967 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 87, 0 ],
+									"output": [ "Man kan inte dividera med noll." ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 2485, 7 ],
+									"output": [ 355 ]
+								}
+							}
+						}
+					]
+				},
+				{   "id": "CAL01",
+					"levelSettings": {
+						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",
+						"taskDescription": {
+							"header": "Gör en miniräknare, som kan räkna med addition och subtraktion",
+							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\" eller \"-\") och då ska programmet skriva ut resultatet.\n\n<b>Exempel på program:</b>\n\nP: \"Skriv första talet\"\nA: \"525\"\nP: \"Skriv andra talet\"\nA: \"4398\"\nP: \"Välj räknesätt (+,-)\"\nA: \"+\"\nP: \"Resultat: 4923\""
 						}
 					},
 					"cases": [
@@ -68,24 +195,94 @@
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ 1, 1, "+" ],
-									"output": [ "Resultat: 2" ]
+									"input": [ 17, 0, "+" ],
+									"output": [ "Resultat: 17" ]
 								}
 							}
 						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 445, 67, "-" ],
+									"output": [ "Resultat: 378" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 877, 6401, "+" ],
+									"output": [ "Resultat: 7278" ]
+								}
+							}
+						}
+					]
+				},
+				{   "id": "CALFI",
+					"levelSettings": {
+						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(resultat)",
+						"taskDescription": {
+							"header": "Gör en miniräknare, som kan räkna med de fyra räknesätten",
+							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\", \"-\", \"*\" eller \"/\") och då ska programmet skriva ut resultatet.\n\n<b>Exempel på program:</b>\n\nP: Skriv första talet\nA: 55\nP: Skriv andra talet\nA: 13\nP: Välj räknesätt (*,/,+,-)\nA: *\nP: 715"
+						}
+                    },
+					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
 									"input": [ 4, 6, "*" ],
-									"output": [ "Resultat: 24" ]
+									"output": [ 24 ]
 								}
 							}
 						},
 						{
 							"caseDefinition": {
 								"test": {
-									"input": [ 87, 64, "/" ],
-									"output": [ "Resultat: 1.359375" ]
+									"input": [ 870, 64, "/" ],
+									"output": [ 13.59375 ]
+								}
+							}
+                        },
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 368, 13, "-" ],
+									"output": [ 355 ]
+								}
+							}
+						}
+					]
+                },
+				{   "id": "CALFX",
+					"levelSettings": {
+						"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(resultat)",
+						"taskDescription": {
+							"header": "Gör en miniräknare, som kan räkna med de fyra räknesätten",
+							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\", \"-\", \"*\" eller \"/\") och då ska programmet skriva ut resultatet. Om räknesättet är division och andra talet är 0 ska programmet skriva ut \"Man kan inte dividera med noll.\".\n\n<b>Exempel på program:</b>\n\nP: Skriv första talet\nA: 55\nP: Skriv andra talet\nA: 13\nP: Välj räknesätt (*,/,+,-)\nA: *\nP: 715"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 4, 6, "*" ],
+									"output": [ 24 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 7, 0, "+" ],
+									"output": [ 7 ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 368, 0, "/" ],
+									"output": [ "Man kan inte dividera med noll." ]
 								}
 							}
 						}
