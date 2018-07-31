@@ -298,7 +298,7 @@
 					"levelSettings": {
 						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Hej på dig\", svar)",
 						"taskDescription": {
-							"header": "Skriv ett program som hälsar på användaren",
+							"header": "Skriv ett program som hälsar på användaren.",
 							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Vad heter du?\nA:   Jonathan\nP:   Hej på dig Jonathan"
 						}
                     },
