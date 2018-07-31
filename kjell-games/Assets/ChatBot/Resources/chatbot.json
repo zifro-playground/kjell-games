@@ -21,6 +21,10 @@
             "levelId": "O2AR2"
         },
         {
+            "sceneName": "Scene1",
+            "levelId": "O2AR3"
+        },
+        {
 			"sceneName": "Scene1",
 			"levelId": "IOBA1"
         },
@@ -200,6 +204,46 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn.",
+                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   God morgon Morgan"
+						}
+					},
+					"cases": [
+                        {
+                            "caseSettings": {
+								"precode": "namn = \"Morgan\"\nhälsning = \"God morgon\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "God morgon Morgan" ]
+								}
+							}
+                        },
+                        {
+                            "caseSettings": {
+								"precode": "namn = \"Pär\"\nhälsning = \"Halli hallå\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Halli hallå Pär" ]
+								}
+							}
+						},
+                        {
+                            "caseSettings": {
+								"precode": "namn = \"Livia\"\nhälsning = \"Hej\""
+							},
+                            "caseDefinition": {
+								"test": {
+									"output": [ "Hej Livia" ]
+								}
+							}
+						}
+                    ]
+                },
+                {   "id": "O2AR3",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ett program som hälsar på användaren med namn.",
                             "body": "Använd namnet som du får i variabeln \"namn\".\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Lana"
 						}
 					},
@@ -257,13 +301,22 @@
 							"header": "Skriv ett program som hälsar på användaren",
 							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Vad heter du?\nA:   Jonathan\nP:   Hej på dig Jonathan"
 						}
-					},
+                    },
+                    "sandbox": {},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
 									"input": [ "Jonathan" ],
 									"output": [ "Hej!", "Hej på dig Jonathan" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ "Frey" ],
+									"output": [ "Hej!", "Hej på dig Frey" ]
 								}
 							}
 						},
