@@ -5,7 +5,7 @@ using Kjell;
 using PM;
 using UnityEngine;
 
-public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMCompilerStopped, IPMCompilerStarted
+public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMTimeToCorrectCase, IPMCompilerStarted
 {
 	public static bool hasTestDefined;
 
@@ -19,7 +19,7 @@ public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMCompilerStopped
 
 	public static void NextInput(GameObject inputValueObject)
 	{
-		if (hasTestDefined)
+		if (hasTestDefined && PMWrapper.LevelMode != LevelMode.Sandbox)
 		{
 			if (inputs == null || inputs.Count == 0)
 				PMWrapper.RaiseTaskError("Jag förväntade mig inga inmatningar, så nu vet jag inte vad jag ska mata in.");
@@ -139,17 +139,14 @@ public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMCompilerStopped
 		}
 	}
 
-	public void OnPMCompilerStopped(HelloCompiler.StopStatus status)
+	public void OnPMTimeToCorrectCase()
 	{
-		if (status == HelloCompiler.StopStatus.Finished)
-		{
 			CheckTooFewInputs();
 
 			if (!string.IsNullOrEmpty(errorMessage))
 				PMWrapper.RaiseTaskError(errorMessage);
 			else
 				PMWrapper.SetCaseCompleted();
-		}
 	}
 
 	public void OnPMCompilerStarted()
