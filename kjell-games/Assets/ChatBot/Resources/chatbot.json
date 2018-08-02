@@ -338,6 +338,7 @@
 							"body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Ganska bra\nP:   Vad kul att du mår Ganska bra"
 						}
 					},
+                    "sandbox": {},
 					"cases": [
 						{
 							"caseDefinition": {
@@ -373,6 +374,7 @@
 							"body": "Om användaren svarar \"Dåligt\" ska du säga \"Vad tråkigt att du mår Dåligt\", annars ska du skriva \"Vad kul att du mår...\". När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Dåligt\nP:   Vad tråkigt att du mår Dåligt \n\n Tips: Använd if-satser."
 						}
 					},
+                    "sandbox": {},
 					"cases": [
 						{
 							"caseDefinition": {
@@ -437,6 +439,7 @@
                             "body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Havregrynsgröt\nP:   Åh vad gott! Jag åt också Havregrynsgröt idag!"
 						}
 					},
+                    "sandbox": {},
 					"cases": [
                         {
                             "caseDefinition": {
@@ -471,6 +474,7 @@
                             "body": "Om användaren skriver \"inget\" ska programmet svara \":-(\", annars ska du svara som tidigare \"Vad gott! Jag åt också ... idag!\" När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Inget\nP:   :-("
 						}
 					},
+                    "sandbox": {},
 					"cases": [
                         {
                             "caseDefinition": {
