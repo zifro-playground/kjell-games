@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using ErrorHandler;
 using Kjell;
 using PM;
 using UnityEngine;
@@ -17,9 +17,11 @@ public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMTimeToCorrectCa
 
 	private static string errorMessage;
 
-	public static void NextInput(GameObject inputValueObject)
+	public static IEnumerator NextInput(GameObject inputValueObject)
 	{
-		if (hasTestDefined && PMWrapper.LevelMode != LevelMode.Sandbox)
+		yield return new WaitForSeconds((1 - PMWrapper.speedMultiplier) * 2);
+
+		if (hasTestDefined && PMWrapper.LevelMode == LevelMode.Case)
 		{
 			if (inputs == null || inputs.Count == 0)
 				PMWrapper.RaiseTaskError("Jag förväntade mig inga inmatningar, så nu vet jag inte vad jag ska mata in.");
@@ -30,7 +32,7 @@ public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMTimeToCorrectCa
 			else
 			{
 				var nextInput = inputs[inputIndex];
-				inputValueObject.GetComponent<InputValue>().SubmitInput(nextInput);
+				IOStream.Instance.StartCoroutine(inputValueObject.GetComponent<InputValue>().StartInputAnimation(nextInput));
 				inputIndex++;
 			}
 		}
@@ -141,12 +143,12 @@ public class CaseCorrection : MonoBehaviour, IPMCaseSwitched, IPMTimeToCorrectCa
 
 	public void OnPMTimeToCorrectCase()
 	{
-			CheckTooFewInputs();
+		CheckTooFewInputs();
 
-			if (!string.IsNullOrEmpty(errorMessage))
-				PMWrapper.RaiseTaskError(errorMessage);
-			else
-				PMWrapper.SetCaseCompleted();
+		if (!string.IsNullOrEmpty(errorMessage))
+			PMWrapper.RaiseTaskError(errorMessage);
+		else
+			PMWrapper.SetCaseCompleted();
 	}
 
 	public void OnPMCompilerStarted()

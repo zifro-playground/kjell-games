@@ -1,4 +1,4 @@
-﻿using PM;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,9 +7,10 @@ namespace Kjell
 	public class InputValue : MonoBehaviour
 	{
 		public Text SubmittedText;
-		public Text InputText;
 
-		public GameObject InputField;
+		public InputField InputField;
+
+		public GameObject InputFieldBase;
 		public GameObject SendButton;
 
 		public Image BubbleImage;
@@ -24,33 +25,37 @@ namespace Kjell
 
 		public void SubmitInput()
         {
-			if (!string.IsNullOrEmpty(InputText.text))
-				SubmittedText.text = InputText.text;
+			if (!string.IsNullOrEmpty(InputField.text))
+				SubmittedText.text = InputField.text;
 
-            InputField.SetActive(false);
+            InputFieldBase.SetActive(false);
             SendButton.SetActive(false);
             SubmittedText.gameObject.SetActive(true);
 
             IOStream.Instance.InputSubmitted(SubmittedText.text);
         }
 
-		public void SubmitInput(string message)
+		public IEnumerator StartInputAnimation(string message)
 		{
-			SubmittedText.text = message;
-			InputText.text = message;
-			InputField.SetActive(false);
-			SendButton.SetActive(false);
-			SubmittedText.gameObject.SetActive(true);
+			foreach (var character in message)
+			{
+				InputField.text += character;
+				InputField.caretPosition = message.Length;
 
-			IOStream.Instance.InputSubmitted(SubmittedText.text);
+				yield return new WaitForSeconds((1 - PMWrapper.speedMultiplier) * 0.4f);
+			}
+
+			yield return new WaitForSeconds((1 - PMWrapper.speedMultiplier) * 2);
+
+			SubmitInput();
 		}
 
 		public void DeactivateInputValue()
 		{
-			if (!string.IsNullOrEmpty(InputText.text))
-				SubmittedText.text = InputText.text;
+			if (!string.IsNullOrEmpty(InputField.text))
+				SubmittedText.text = InputField.text;
 
-			InputField.SetActive(false);
+			InputFieldBase.SetActive(false);
 			SendButton.SetActive(false);
 			SubmittedText.gameObject.SetActive(true);
 		}
