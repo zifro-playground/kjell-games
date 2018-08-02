@@ -20,6 +20,10 @@
 			"sceneName": "Scene1",
 			"levelId": "SEQMU"
         },
+        {
+			"sceneName": "Scene1",
+			"levelId": "IOINT"
+        },
 		{
 			"sceneName": "Scene1",
 			"levelId": "IOEO1"
@@ -43,7 +47,7 @@
                     "guideBubbles": [
 						{
 							"target": "1",
-							"text": "Här skapas en for-slinga. Värdet på <b>i</b> kommer att börja på 0 och öka för varje varv."
+							"text": "Här skapas en for-slinga. Värdet på <b>i</b> kommer att börja på <b>0</b> och öka för varje varv."
                         },
                         {
 							"target": "2",
@@ -145,6 +149,60 @@
 							"caseDefinition": {
 								"test": {
 									"output": [ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "IOINT",
+                    "guideBubbles": [
+						{
+							"target": "2",
+							"text": "Här omvandlar vi användarens inmatning (<b>svar</b>) till ett tal. Till skillnad från funktionen <b>int</b> så kan <b>float</b> omvandla decimaltal, och inte bara heltal."
+                        },
+                        {
+							"target": "3",
+							"text": "Vi kan kolla om <b>tal</b> är ett heltal genom att är ett heltal eller inte genom att se om det blir samma när vi avrundar det."
+                        },
+                        {
+							"target": "3",
+							"text": "Om det inte blir någon skillnad när det avrundas, var <b>tal</b> redan ett heltal."
+                        },
+                        {
+							"target": "5",
+							"text": "Men om det blir en skillnad så var det inte ett heltal från början!"
+                        }
+					],
+					"levelSettings": {
+						"startCode": "svar = input(\"Skriv ett tal\")\ntal = float(svar)\nif tal == round(tal):\n\tprint(tal, \"är ett heltal\")\nelse:\n\tprint(tal, \"är inte ett heltal\")",
+						"taskDescription": {
+							"header": "Skriv ett program som kollar om ett tal är ett heltal",
+							"body": "Programmet ska fråga användaren om ett tal, och sen skriva ut om det talet är ett heltal.\n\n<b>Exempel på program:</b>\n\nP:   Skriv ett tal\nA:   5.31\nP:   5.31 är inte ett heltal"
+						}
+                    },
+                    "sandbox": {},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 2 ],
+									"output": [ "2 är ett heltal" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ 13.33 ],
+									"output": [ "13.33 är inte ett heltal" ]
+								}
+							}
+						},
+						{
+							"caseDefinition": {
+								"test": {
+									"input": [ -0.333333 ],
+									"output": [ "-0.333333 är inte ett heltal" ]
 								}
 							}
 						}
