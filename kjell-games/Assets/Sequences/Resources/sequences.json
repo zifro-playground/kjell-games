@@ -3,14 +3,30 @@
 		{
 			"sceneName": "Scene1",
 			"levelId": "SEQ10"
-		},
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQ17"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQ20"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQDI"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQMU"
+        },
 		{
 			"sceneName": "Scene1",
 			"levelId": "IOEO1"
 		},
 		{
 			"sceneName": "Scene1",
-			"levelId": "SEQDX"
+			"levelId": "ISEQD"
 		}
 	],
 	"scenes": [
@@ -23,13 +39,26 @@
 				]
 			},
 			"levels": [
-				{
-					"id": "SEQ10",
+                {   "id": "SEQ10",
+                    "guideBubbles": [
+						{
+							"target": "1",
+							"text": "Här skapas en for-slinga. Värdet på <b>i</b> kommer att börja på 0 och öka för varje varv."
+                        },
+                        {
+							"target": "2",
+							"text": "Vi skriver ut värdet som <b>i</b> har varje varv i for-slingan."
+                        },
+                        {
+							"target": "play",
+							"text": "Testa att köra koden!"
+                        }
+					],
 					"levelSettings": {
-						"startCode": "for i in range(11):\n\tprint(i)\n",
+						"startCode": "for i in range(11):\n\tprint(i)",
 						"taskDescription": {
-							"header": "Skriv ut alla tal från 0 till 10",
-							"body": "<b>Exempel på program:</b>\n\nP: 0\nP: 1\nP: 2\n...\nP: 10"
+							"header": "Skriv ut alla tal från 0 till 10.",
+							"body": "<b>Exempel på program:</b>\n\nP:   0\nP:   1\nP:   2\n...\nP:   10"
 						}
 					},
 					"cases": [
@@ -41,16 +70,121 @@
 							}
 						}
 					]
+                },
+                {   "id": "SEQ17",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla tal från 0 till 17.",
+							"body": "<b>Exempel på program:</b>\n\nP:   0\nP:   1\nP:   2\n...\nP:   17"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQ20",
+                    "guideBubbles": [
+						{
+							"target": "1",
+							"text": "Det går att ange vilket tal <b>i</b> ska börja på. Här väljer vi att börja på <b>10</b>."
+                        },
+                        {
+							"target": "2",
+							"text": "Fyll på med kod själv!"
+                        }
+					],
+					"levelSettings": {
+						"startCode": "for i in range(10, 21):\n\t",
+						"taskDescription": {
+							"header": "Skriv ut alla tal från 10 till 20.",
+							"body": "<b>Exempel på program:</b>\n\nP:   10\nP:   11\nP:   12\n...\nP:   20"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQDI",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "För alla tal från 0 till 10, skriv ut talet dividerat med två.",
+							"body": "<b>Exempel på program:</b>\n\nP:   0\nP:   0.5\nP:   1\n...\nP:   5"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQMU",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "För alla tal från 0 till 10, skriv ut talet multiplicerat med två.",
+                            "body": "<b>Exempel på program:</b>\n\nP:   0\nP:   2\nP:   4\n...\nP:   20"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+								}
+							}
+						}
+					]
 				},
-				{
-					"id": "IOEO1",
+                {   "id": "IOEO1",
+                    "guideBubbles": [
+						{
+							"target": "3",
+							"text": "Här dividerar vi talet som användaren har skrivit in med 2 och sparar värdet i variabeln <b>kvot</b>."
+                        },
+                        {
+							"target": "4",
+							"text": "Om <b>kvot</b> är ett heltal så är <b>tal</b> är jämt och om <b>kvot</b> <i>inte</i> är ett heltal så är <b>tal</b> udda."
+                        },
+                        {
+							"target": "4",
+							"text": "Vi kan kolla om <b>kvot</b> är ett heltal eller inte genom att se om det blir samma när vi avrundar det."
+                        },
+                        {
+							"target": "5",
+							"text": "Om är <b>kvot</b> är samma som <b>round(kvot)</b> är <b>kvot</b> ett heltal och <b>tal</b> jämnt."
+                        },
+                        {
+							"target": "7",
+							"text": "Annars är <b>kvot</b> inte ett hetlal och <b>tal</b> udda."
+                        },
+                        {
+							"target": "play",
+							"text": "Testa att köra koden!"
+                        }
+					],
 					"levelSettings": {
 						"startCode": "svar = input(\"Skriv ett tal\")\ntal = int(svar)\nkvot = tal/2\nif kvot == round(kvot):\n\tprint(tal, \"är ett jämnt tal\")\nelse:\n\tprint(tal, \"är ett udda tal\")",
 						"taskDescription": {
 							"header": "Skriv ett program som kollar om ett tal är jämt eller udda",
-							"body": "Programmet ska fråga användaren om ett tal, och sen skriva ut om det talet är udda eller jämnt.\n\n<b>Exempel på program:</b>\n\nP: Skriv ett tal\nA: 5\nP: 5 är ett udda tal"
+							"body": "Programmet ska fråga användaren om ett tal, och sen skriva ut om det talet är udda eller jämnt.\n\n<b>Exempel på program:</b>\n\nP:   Skriv ett tal\nA:   5\nP:   5 är ett udda tal"
 						}
-					},
+                    },
+                    "sandbox": {},
 					"cases": [
 						{
 							"caseDefinition": {
@@ -78,13 +212,12 @@
 						}
 					]
 				},
-				{
-					"id": "SEQDX",
+				{   "id": "ISEQD",
 					"levelSettings": {
 						"startCode": "svar = input(\"Skriv talet att kolla delbarhet med\")\nnämnare = int(svar)\nfor i in range(21): \n\tkvot = i/nämnare\n\tif kvot == round(kvot):\n\t\tprint(i)",
 						"taskDescription": {
-							"header": "Skriv ut alla tal mellan 0 och 20 som är jämnt delbara med ett tal som användaren väljer",
-							"body": "Användaren ska välja ett tal, och sen ska programmet skriva ut alla tal mellan 0 och 20 som går att dela jämnt med talet som användaren valde.\n\n<b>Exempel på program:</b>\n\nP: Skriv talet att kolla delabarhet med\nA: 3\nP: 0\nP: 3\nP: 6\nP: 9\n...\nP: 18"
+							"header": "Skriv ut alla tal mellan 0 och 20 som är jämnt delbara med ett tal som användaren väljer.",
+							"body": "Användaren ska välja ett tal, och sen ska programmet skriva ut alla tal mellan 0 och 20 som går att dela jämnt med talet som användaren valde.\n\n<b>Exempel på program:</b>\n\nP:   Skriv talet att kolla delabarhet med\nA:   3\nP:   0\nP:   3\nP:   6\nP:   9\n...\nP:   18"
 						}
 					},
 					"cases": [
