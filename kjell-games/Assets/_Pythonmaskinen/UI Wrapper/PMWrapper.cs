@@ -19,6 +19,9 @@ public static class PMWrapper
 	/// </summary>
 	public const string Version = "1.2.0";
 
+	/// <summary>
+	/// Tells which mode the level is currently running. See <see cref="PM.LevelMode"/> for avaliable modes.
+	/// </summary>
 	public static LevelMode LevelMode
 	{
 		get { return LevelModeController.Instance.LevelMode; }
