@@ -157,7 +157,7 @@
                     "guideBubbles": [
 						{
 							"target": "3",
-							"text": "Det går att kombinera flera saker i en <b>print</b>. Använd komma mellan varje sak du vill skriva ut."
+							"text": "Det går att kombinera flera saker i en <b>print</b>. Använd kommatecken mellan varje sak du vill skriva ut."
                         }
 					],
 					"levelSettings": {
@@ -244,7 +244,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn.",
-                            "body": "Använd namnet som du får i variabeln \"namn\".\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Lana"
+                            "body": "Programmet ska skriva \"Hej\" och sen namnet som du får i variabeln <b>namn</b>.\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Lana"
 						}
 					},
 					"cases": [
@@ -284,7 +284,7 @@
                     "guideBubbles": [
 						{
 							"target": "2",
-							"text": "Vi kan ställa frågor till annvändaren med hjälp av <b>input</b>."
+							"text": "Vi kan ställa frågor till användaren med hjälp av <b>input</b>."
                         },
                         {
 							"target": "2",
@@ -299,7 +299,7 @@
 						"startCode": "print(\"Hej!\")\nsvar = input(\"Vad heter du?\")\nprint(\"Hej på dig\", svar)",
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren.",
-							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Vad heter du?\nA:   Jonathan\nP:   Hej på dig Jonathan"
+							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika namn beroende på vad användaren matar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Vad heter du?\nA:   Jonathan\nP:   Hej på dig Jonathan"
 						}
                     },
                     "sandbox": {},
@@ -335,7 +335,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren och frågar användaren hur den mår.",
-							"body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Ganska bra\nP:   Vad kul att du mår Ganska bra"
+							"body": "När du kör programmet ska det se ut exakt som nedan, fast med olika humör beroende vad användaren matar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Ganska bra\nP:   Vad kul att du mår Ganska bra"
 						}
 					},
                     "sandbox": {},
@@ -371,7 +371,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren och frågar användaren hur den mår.",
-							"body": "Om användaren svarar \"Dåligt\" ska du säga \"Vad tråkigt att du mår Dåligt\", annars ska du skriva \"Vad kul att du mår...\". När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Dåligt\nP:   Vad tråkigt att du mår Dåligt \n\n Tips: Använd if-satser."
+							"body": "Om användaren svarar \"Dåligt\" ska du säga \"Vad tråkigt att du mår Dåligt\", annars ska du skriva \"Vad kul att du mår...\". När du kör programmet ska det se ut exakt som nedan, fast med olika humör beroende på vad användaren matar in.\n\n<b>Resultat (exempel):</b>\n\nP:   Hej!\nP:   Hur mår du?\nA:   Dåligt\nP:   Vad tråkigt att du mår Dåligt \n\n Tips: Använd if-satser."
 						}
 					},
                     "sandbox": {},
@@ -406,7 +406,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som hälsar på användaren med namn och utropstecken.",
-                            "body": "Använd hälsningen och namnet som du finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Sara!"
+                            "body": "Använd hälsningen och namnet som finns i variablerna <b>hälsning</b> och <b>namn</b> och avsluta med ett utropstecken.\n\n <b>Resultat (exempel):</b>\n\nP:   Hej Sara !"
 						}
 					},
 					"cases": [
@@ -436,7 +436,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som frågar användaren vad den åt till frukost.",
-                            "body": "När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Havregrynsgröt\nP:   Åh vad gott! Jag åt också Havregrynsgröt idag!"
+                            "body": "Fråga användaren vad den åt till frukost, och säg att du också åt just det. När du kör programmet ska det se ut exakt som nedan, fast med olika frukosträtter beroende på vad användaren matar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Havregrynsgröt\nP:   Vad gott! Jag åt också Havregrynsgröt idag!"
 						}
 					},
                     "sandbox": {},
@@ -471,7 +471,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som frågar användaren vad den åt till frukost.",
-                            "body": "Om användaren skriver \"inget\" ska programmet svara \":-(\", annars ska du svara som tidigare \"Vad gott! Jag åt också ... idag!\" När du kör programmet ska det se ut exakt som nedan, fast lite olika beroende på vad användaren knappar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Inget\nP:   :-("
+                            "body": "Om användaren skriver \"Inget\" ska programmet svara \":-(\", annars ska du svara som tidigare \"Vad gott! Jag åt också ... idag!\". När du kör programmet ska det se ut exakt som nedan, fast med olika frukosträtter beroende på vad användaren matar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Inget\nP:   :-("
 						}
 					},
                     "sandbox": {},
