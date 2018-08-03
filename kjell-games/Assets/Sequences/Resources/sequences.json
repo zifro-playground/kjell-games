@@ -27,6 +27,38 @@
 		{
 			"sceneName": "Scene1",
 			"levelId": "IOEO1"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQE1"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQE2"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQO1"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQD1"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "SEQD2"
+		},
+		{
+			"sceneName": "Scene1",
+			"levelId": "SEQD3"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQD4"
+        },
+        {
+			"sceneName": "Scene1",
+			"levelId": "SEQD5"
 		},
 		{
 			"sceneName": "Scene1",
@@ -269,7 +301,143 @@
 							}
 						}
 					]
-				},
+                },
+                {   "id": "SEQE1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla jämna tal mellan 0 och 15.",
+                            "body": "<b>Exempel på program:</b>\n\nP:   0\nP:   2\nP:   4\n...\nP:   14\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 2, 4, 6, 8, 10, 12, 14]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQE2",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla jämna tal mellan 11 och 25.",
+                            "body": "<b>Exempel på program:</b>\n\nP:   12\nP:   14\nP:   16\n...\nP:   24\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 12, 14, 16, 18, 20, 22, 24 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQO1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla udda tal mellan 0 och 15.",
+                            "body": "<b>Exempel på program:</b>\n\nP:   1\nP:   3\nP:   5\n...\nP:   15\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är udda."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 1, 3, 5, 7, 9, 11, 13, 15]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQD1",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla tal från 0 till 15 som är jämnt delbara med <b>3</b>.",
+                            "body": "<b>Exempel på program:</b>\n\nP:   0\nP:   3\nP:   6\n...\nP:   15\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt delbart med 3."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 3, 6, 9, 12, 15 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQD2",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla tal från 0 till 15 som inte är jämnt delbara med <b>3</b>.",
+                            "body": "<b>Exempel på program:</b>\n\nP:   1\nP:   2\nP:   4\n...\nP:   14\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt delbart med 3."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 1, 2, 4, 5, 7, 8, 10, 11, 13, 14 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQD3",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> eller <b>4</b> från 0 till 20.",
+                            "body": "Du ska skriva ut talen i ökande storleksordning. <b>Exempel på program:</b>\n\nP:   0\nP:   3\nP:   4\nP:   6\nP:   8\n...\nP:   20\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt delbart med 3 eller 4 (här kan <b>elif</b> komma till hjälp."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 3, 4, 6, 8, 9, 12, 15, 16, 18, 20 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQD4",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> och <b>2</b> från 0 till 30.",
+                            "body": "Du ska skriva ut talen i ökande storleksordning. <b>Exempel på program:</b>\n\nP:   0\nP:   6\n...\nP:   30\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt delbart med 3, och om det är det, kolla om det är delbart med 2."
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 0, 6, 12, 18, 24, 30 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "SEQD5",
+					"levelSettings": {
+						"taskDescription": {
+							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> men inte med <b>2</b> från 0 till 30.",
+                            "body": "Du ska skriva ut talen i ökande storleksordning. <b>Exempel på program:</b>\n\nP:   3\nP:   9\n...\nP:   27"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 3, 9, 15, 21, 27 ]
+								}
+							}
+						}
+					]
+                },
 				{   "id": "ISEQD",
 					"levelSettings": {
 						"startCode": "svar = input(\"Skriv talet att kolla delbarhet med\")\nnämnare = int(svar)\nfor i in range(21): \n\tkvot = i/nämnare\n\tif kvot == round(kvot):\n\t\tprint(i)",
@@ -277,7 +445,8 @@
 							"header": "Skriv ut alla tal mellan 0 och 20 som är jämnt delbara med ett tal som användaren väljer.",
 							"body": "Användaren ska välja ett tal, och sen ska programmet skriva ut alla tal mellan 0 och 20 som går att dela jämnt med talet som användaren valde.\n\n<b>Exempel på program:</b>\n\nP:   Skriv talet att kolla delabarhet med\nA:   3\nP:   0\nP:   3\nP:   6\nP:   9\n...\nP:   18"
 						}
-					},
+                    },
+                    "sandbox": {},
 					"cases": [
 						{
 							"caseDefinition": {
