@@ -61,7 +61,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som adderar variablerna x och y och skriver ut summan.",
-							"body": "Använd variablerna <b>x</b> och <b>y</b> och funktionen <b>print</b> för att skriva ut summan. \n\n<b>Exempel på program:</b>\n\nP:   238992"
+							"body": "Använd variablerna <b>x</b> och <b>y</b> och funktionen <b>print</b> för att skriva ut summan. \n\n<b>Resultat (exempel):</b>\n\nP:   238992"
 						}
 					},
 					"cases": [
@@ -101,7 +101,7 @@
                     "levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som multiplicerar variablerna x och y och skriver ut faktorn.",
-							"body": "Använd variablerna <b>x</b> och <b>y</b> och funktionen <b>print</b> för att skriva ut faktorn. \n\n<b>Exempel på program:</b>\n\nP:   84"
+							"body": "Använd variablerna <b>x</b> och <b>y</b> och funktionen <b>print</b> för att skriva ut faktorn. \n\n<b>Resultat (exempel):</b>\n\nP:   84"
 						}
 					},
 					"cases": [
@@ -145,11 +145,11 @@
                         },
                         {
 							"target": "2",
-							"text": "Här låter vi användaren skriva in den andra termen och sparar svaret i variabeln <b>svar2</b>"
+							"text": "Här låter vi användaren skriva in den andra termen och sparar svaret i variabeln <b>svar</b>"
                         },
                         {
                             "target": "3",
-                            "text": "Allt användaren skriver in blir en <b><i>sträng</i></b>, men vi behöver få det till tal för att kunna räkna med det."
+                            "text": "Allt användaren matar in blir en <b><i>sträng</i></b>, men det behöver vara ett tal för att vi ska kunna räkna med det."
                         },
                         {
                             "target": "3",
@@ -161,10 +161,10 @@
                         }
 					],
 					"levelSettings": {
-                        "startCode": "svar2 = input(\"Skriv andra termen\")\ntal2 = int(svar2)\nprint(tal1 + tal2)",
+                        "startCode": "svar = input(\"Skriv andra termen\")\ntal2 = int(svar)\nprint(tal1 + tal2)",
 						"taskDescription": {
 							"header": "Skriv ett program som räknar ut summan av två tal, där användaren får skriva in ett av talen.",
-							"body": "Använd variabeln <b>x</b> som första termen och funktionen <b>input</b> för låta användaren skriva in den andra termen.\n\n<b>Exempel på program:</b>\n\nP:   Välj en term:\nA:   2\nP:   939"
+							"body": "Använd variabeln <b>x</b> som första termen och funktionen <b>input</b> för låta användaren skriva in den andra termen.\n\n<b>Resultat (exempel):</b>\n\nP:   Välj en term:\nA:   2\nP:   939"
 						}
                     },
                     "sandbox": {
@@ -211,8 +211,8 @@
                 {   "id": "IOAD2",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ett program som räknar ut summan av två tal som användaren skriver in.",
-							"body": "Progammet ska be användaren om två tal, och sen skriva ut summan. \n\n<b>Exempel på program:</b>\n\nP:   Skriv första termen\nA:   5\nP:   Skriv andra termen\nA:   7\nP:   12"
+							"header": "Skriv ett program som räknar ut summan av två tal som användaren matar in.",
+							"body": "Progammet ska be användaren om två tal, och sen skriva ut summan. \n\n<b>Resultat (exempel):</b>\n\nP:   Skriv första termen\nA:   5\nP:   Skriv andra termen\nA:   7\nP:   12"
 						}
 					},
                     "sandbox": {},
@@ -246,8 +246,8 @@
                 {   "id": "IOMU1",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ett program som räknar ut produkten av två tal som användaren skriver in.",
-							"body": "Progammet ska be användaren om två tal, och sen skriva ut produkten. \n\n<b>Exempel på program:</b>\n\nP:   Skriv första faktorn\nA:   5\nP:   Skriv andra faktorn\nA:   7\nP:   35\n\n Tips: För att multiplicera två tal använder du tecknet \"<b>*</b>\" (asterisk)."
+							"header": "Skriv ett program som räknar ut produkten av två tal som användaren matar in.",
+							"body": "Progammet ska be användaren om två tal, och sen skriva ut produkten. \n\n<b>Resultat (exempel):</b>\n\nP:   Skriv första faktorn\nA:   5\nP:   Skriv andra faktorn\nA:   7\nP:   35\n\n Tips: För att multiplicera två tal använder du tecknet \"<b>*</b>\" (asterisk)."
 						}
 					},
                     "sandbox": {},
@@ -281,8 +281,8 @@
                 {   "id": "IODI1",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ett program som dividerar två tal som användaren skriver in.",
-							"body": "Progammet ska be användaren om två tal, och sen skriva ut kvoten. <b>OBS!</b> Om det andra talet som användaren skriver in (nämnaren) är <b>0</b>, så ska programmet skriva ut \"Man kan inte dividera med noll.\". \n\n<b>Exempel på program:</b>\n\nP:   Välj första talet\nA:   5897\nP:   Välj andra talet\nA:   0\nP:   Man kan inte dividera med noll.\n\n Tips: Använd en if-sats för att kolla om andra talet är 0."
+							"header": "Skriv ett program som dividerar två tal som användaren matar in.",
+							"body": "Progammet ska be användaren om två tal, och sen skriva ut kvoten. <b>OBS!</b> Om det andra talet som användaren matar in (nämnaren) är <b>0</b>, så ska programmet skriva ut \"Man kan inte dividera med noll\". \n\n<b>Resultat (exempel):</b>\n\nP:   Välj första talet\nA:   5897\nP:   Välj andra talet\nA:   0\nP:   Man kan inte dividera med noll\n\n Tips: Använd en if-sats för att kolla om andra talet är 0."
 						}
 					},
                     "sandbox": {},
@@ -316,8 +316,8 @@
                 {   "id": "IOKV1",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ett program som tar kvadraten på ett tal som användaren matar in och skriver ut kvadraten.",
-							"body": "Progammet ska be användaren ett tal och skriva ut kvadraten av det talet. \n\n<b>Exempel på program:</b>\n\nP:   Välj tal\nA:   5\nP:   25\n\nTips: Om du vill ta kvadraten av ett tal (upphöjt till två), kan du använda <b>**</b>.\n Exempel:  <b>x_kvadrat = x**2</b>. "
+							"header": "Skriv ett program som tar kvadraten på ett tal som användaren matar in och skriver ut resultatet.",
+							"body": "Progammet ska be användaren ett tal och skriva ut kvadraten av det talet. \n\n<b>Resultat (exempel):</b>\n\nP:   Välj tal\nA:   5\nP:   25\n\nTips: Om du vill ta kvadraten av ett tal (upphöjt till två), kan du använda <b>**</b>.\n Exempel:  <b>x_kvadrat = x**2</b>. "
 						}
 					},
                     "sandbox": {},
@@ -353,7 +353,7 @@
 						/*"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(\"Resultat:\", resultat)",*/
 						"taskDescription": {
 							"header": "Gör en miniräknare, som kan räkna med addition och subtraktion.",
-							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"<b>+</b>\" eller \"<b>-</b>\") och då ska programmet skriva ut resultatet.\n\n<b>Exempel på program:</b>\n\nP: Skriv första talet\nA: 525\nP: Skriv andra talet\nA: 4398\nP: Välj räknesätt (+,-)\nA: +\nP: Resultat: 4923"
+							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"<b>+</b>\" eller \"<b>-</b>\") och då ska programmet skriva ut resultatet. Använd en if-sats för att kolla vilket räknesätt användaren valde. \n\n<b>Resultat (exempel):</b>\n\nP: Skriv första talet\nA: 525\nP: Skriv andra talet\nA: 4398\nP: Välj räknesätt (+,-)\nA: +\nP: 4923"
 						}
 					},
                     "sandbox": {},
@@ -389,7 +389,7 @@
 						/*"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(resultat)",*/
 						"taskDescription": {
 							"header": "Gör en miniräknare, som kan räkna med de fyra räknesätten.",
-							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\", \"-\", \"*\" eller \"/\") och då ska programmet skriva ut resultatet.\n\n<b>Exempel på program:</b>\n\nP: Skriv första talet\nA: 55\nP: Skriv andra talet\nA: 13\nP: Välj räknesätt (*,/,+,-)\nA: *\nP: 715"
+							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\", \"-\", \"*\" eller \"/\") och då ska programmet skriva ut resultatet.\n\n<b>Resultat (exempel):</b>\n\nP: Skriv första talet\nA: 55\nP: Skriv andra talet\nA: 13\nP: Välj räknesätt (*,/,+,-)\nA: *\nP: 715"
 						}
                     },
                     "sandbox": {},
@@ -425,7 +425,7 @@
 						/*"startCode": "svar1 = input(\"Skriv första talet\")\ntal1 = int(svar1)\nsvar2 = input(\"Skriv andra talet\")\ntal2 = int(svar2)\nräknesätt = input(\"Välj räknesätt (*,/,+,-)\")\nif räknesätt == \"+\":\n\tresultat = tal1 + tal2\nelif räknesätt == \"-\":\n\tresultat = tal1 - tal2\nelif räknesätt == \"*\":\n\tresultat = tal1 * tal2\nelif räknesätt == \"/\":\n\tresultat = tal1 / tal2\nelse:\n\tprint(\"Förstod inte räknesätt\")\nprint(resultat)",*/
 						"taskDescription": {
 							"header": "Gör en miniräknare, som kan räkna med de fyra räknesätten och varnar vid division med noll.",
-							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\", \"-\", \"*\" eller \"/\") och då ska programmet skriva ut resultatet. Om räknesättet är division och andra talet är 0 ska programmet skriva ut \"Man kan inte dividera med noll.\".\n\n<b>Exempel på program:</b>\n\nP:   Skriv första talet\nA:   55\nP:   Skriv andra talet\nA:   13\nP:   Välj räknesätt (*,/,+,-)\nA:   *\nP:   715"
+							"body": "Först ska användaren mata in två tal, sen välja räknesätt (\"+\", \"-\", \"*\" eller \"/\") och då ska programmet skriva ut resultatet. Om räknesättet är division och andra talet är 0 ska programmet skriva ut \"Man kan inte dividera med noll\".\n\n<b>Resultat (exempel):</b>\n\nP:   Skriv första talet\nA:   55\nP:   Skriv andra talet\nA:   13\nP:   Välj räknesätt (*,/,+,-)\nA:   *\nP:   715"
 						}
 					},
                     "sandbox": {},
@@ -442,7 +442,7 @@
 							"caseDefinition": {
 								"test": {
 									"input": [ 368, 0, "/" ],
-									"output": [ "Man kan inte dividera med noll." ]
+									"output": [ "Man kan inte dividera med noll" ]
 								}
 							}
 						},
