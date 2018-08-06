@@ -436,7 +436,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som frågar användaren vad den åt till frukost.",
-                            "body": "Fråga användaren vad den åt till frukost, och säg att du också åt just det. När du kör programmet ska det se ut exakt som nedan, fast med olika frukosträtter beroende på vad användaren matar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Havregrynsgröt\nP:   Vad gott! Jag åt också Havregrynsgröt idag! \n\n\n <i>(P står för programmet, A står för användaren)</i>"
+                            "body": "Fråga användaren vad den åt till frukost, och säg att du också åt just det. När du kör programmet ska det se ut exakt som nedan, fast med olika frukosträtter beroende på vad användaren matar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Havregrynsgröt\nP:   Jag åt också Havregrynsgröt idag! \n\n\n <i>(P står för programmet, A står för användaren)</i>"
 						}
 					},
                     "sandbox": {},
@@ -444,8 +444,8 @@
                         {
                             "caseDefinition": {
 								"test": {
-                                    "input": [ "Havregrynsgröt" ],
-									"output": [ "Vad gott! Jag åt också Havregrynsgröt idag!" ]
+                                    "input": [ "Smörgås" ],
+									"output": [ "Jag åt också Smörgås idag!" ]
 								}
 							}
                         },
