@@ -164,7 +164,7 @@
                         "startCode": "svar = input(\"Skriv andra termen\")\ntal2 = int(svar)\nprint(tal1 + tal2)",
 						"taskDescription": {
 							"header": "Skriv ett program som räknar ut summan av två tal, där användaren får skriva in ett av talen.",
-							"body": "Använd variabeln <b>x</b> som första termen och funktionen <b>input</b> för låta användaren skriva in den andra termen.\n\n<b>Resultat (exempel):</b>\n\nP:   Välj en term:\nA:   2\nP:   939"
+							"body": "Använd variabeln <b>x</b> som första termen och funktionen <b>input</b> för låta användaren skriva in den andra termen. Skriv sedan ut summan av termerna.\n\n<b>Resultat (exempel):</b>\n\nP:   Skriv andra termen:\nA:   2\nP:   939"
 						}
                     },
                     "sandbox": {
