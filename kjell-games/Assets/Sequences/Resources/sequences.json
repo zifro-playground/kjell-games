@@ -18,15 +18,15 @@
         },
         {
 			"sceneName": "Scene1",
+			"levelId": "SEQE1"
+        },
+        {
+			"sceneName": "Scene1",
 			"levelId": "SEQAD"
         },
         {
 			"sceneName": "Scene1",
 			"levelId": "SEQLH"
-        },
-        {
-			"sceneName": "Scene1",
-			"levelId": "SEQE1"
         },
         {
 			"sceneName": "Scene1",
@@ -36,9 +36,13 @@
 			"sceneName": "Scene1",
 			"levelId": "SEQOD"
         },
+				{
+			"sceneName": "Scene1",
+			"levelId": "SEQ7N"
+        },
         {
 			"sceneName": "Scene1",
-			"levelId": "S4NP1"
+			"levelId": "S7NP1"
         },
         {
 			"sceneName": "Scene1",
@@ -55,10 +59,6 @@
         {
 			"sceneName": "Scene1",
 			"levelId": "SENSQ"
-        },
-        {
-			"sceneName": "Scene1",
-			"levelId": "SNP12"
         }
 	],
 	"scenes": [
@@ -91,7 +91,7 @@
                         "rowLimit": 10,
                         "taskDescription": {
 							"header": "Skriv ut alla tal från 0 till 10.",
-							"body": "<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   2\n...\nP:   10"
+							"body": "Använd en for-slinga för att skriva ut alla tal från 0 till 10.\n\n<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   2\n...\nP:   10"
 						}
 					},
 					"cases": [
@@ -109,7 +109,7 @@
                         "rowLimit": 10,
 						"taskDescription": {
 							"header": "Skriv ut alla tal från 0 till 17.",
-							"body": "<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   2\n...\nP:   17"
+							"body": "Använd en for-slinga för att skriva ut alla tal från 0 till 17.\n\n<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   2\n...\nP:   17"
 						}
 					},
 					"cases": [
@@ -127,7 +127,7 @@
                         "rowLimit": 10,
 						"taskDescription": {
 							"header": "För alla tal från 0 till 10, skriv ut talet dividerat med två.",
-							"body": "<b>Resultat:</b>\n\nP:   0\nP:   0.5\nP:   1\n...\nP:   5"
+							"body": "Inuti en for-slinga kan du räkna med <b>i</b> genom att till exempel skriva <b>i*4</b> eller <b>i/5</b>.\n\n<b>Resultat:</b>\n\nP:   0\nP:   0.5\nP:   1\n...\nP:   5"
 						}
 					},
 					"cases": [
@@ -180,15 +180,15 @@
 					"levelSettings": {
                         "rowLimit": 10,
 						"taskDescription": {
-							"header": "Skriv ut alla tal från 10 till 30.",
-                            "body": "<b>Resultat:</b>\n\nP:   10\nP:   11\nP:   12\n...\nP:   30"
+							"header": "Skriv ut alla tal från 5 till 15.",
+                            "body": "<b>Resultat:</b>\n\nP:   5\nP:   6\nP:   7\n...\nP:   15"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"output": [ 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]
+									"output": [ 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 								}
 							}
 						}
@@ -216,15 +216,15 @@
 					"levelSettings": {
                         "rowLimit": 10,
 						"taskDescription": {
-							"header": "Skriv ut alla jämna tal från 10 till 30.",
-                            "body": "<b>Resultat:</b>\n\nP:   10\nP:   12\nP:   14\n...\nP:   30"
+							"header": "Skriv ut alla jämna tal från 4 till 24.",
+                            "body": "<b>Resultat:</b>\n\nP:   4\nP:   6\nP:   8\n...\nP:   24"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"output": [ 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30 ]
+									"output": [ 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24 ]
 								}
 							}
 						}
@@ -248,19 +248,37 @@
 						}
 					]
                 },
-                {   "id": "S4NP1",
+								{   "id": "SEQ7N",
 					"levelSettings": {
                         "rowLimit": 10,
 						"taskDescription": {
-							"header": "Gör ett program som skriver ut denna talföljd:\n 1, 5, 9, 13, ..., 41",
-                            "body": "<b>Resultat:</b>\n\nP:   1\nP:   5\nP:   9\nP:   13\n...\nP:   41"
+							"header": "Gör ett program som skriver ut denna talföljd:\n 0, 7, 14, 21, ..., 70",
+                            "body": "Nu får du en färdig talföljd. Kan du hitta mönstret i den?\n\n<b>Resultat:</b>\n\nP:   0\nP:   7\nP:   14\nP:   21\n...\nP:   70"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"output": [ 1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41 ]
+									"output": [ 0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70 ]
+								}
+							}
+						}
+					]
+                },
+                {   "id": "S7NP1",
+					"levelSettings": {
+                        "rowLimit": 10,
+						"taskDescription": {
+							"header": "Gör ett program som skriver ut denna talföljd:\n 1, 8, 15, 22, ..., 71",
+                            "body": "<b>Resultat:</b>\n\nP:   1\nP:   8\nP:   15\nP:   22\n...\nP:   71"
+						}
+					},
+					"cases": [
+						{
+							"caseDefinition": {
+								"test": {
+									"output": [ 1, 8, 15, 22, 29, 36, 43, 50, 57, 64, 71 ]
 								}
 							}
 						}
@@ -324,15 +342,15 @@
 					"levelSettings": {
                         "rowLimit": 10,
 						"taskDescription": {
-							"header": "Gör ett program som skriver ut denna talföljd:\n 1, 4, 9, 16, ..., 100",
-                            "body": "<b>Resultat:</b>\n\nP:   1\nP:   4\nP:   9\nP:   16\n...\nP:   100"
+							"header": "Gör ett program som skriver ut denna talföljd:\n 0, 1, 4, 9, 16, ..., 100",
+                            "body": "De sista två nivåerna har lite annorlunda mönster. Kan du hitta dem?\n\n<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   4\nP:   9\nP:   16\n...\nP:   100"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-									"output": [ 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 ]
+									"output": [ 0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100 ]
 								}
 							}
 						}
@@ -343,7 +361,7 @@
                         "rowLimit": 10,
 						"taskDescription": {
 							"header": "Gör ett program som skriver ut denna talföljd:\n 1, 2, 4, 7, ..., 46",
-                            "body": "<b>Resultat:</b>\n\nP:   1\nP:   2\nP:   4\nP:   7\n...\nP:   46"
+                            "body": "<b>Resultat:</b>\n\nP:   1\nP:   2\nP:   4\nP:   7\nP:   11\n...\nP:   46"
 						}
 					},
 					"cases": [
