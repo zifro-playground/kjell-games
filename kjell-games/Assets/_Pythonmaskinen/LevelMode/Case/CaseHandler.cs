@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -8,9 +7,10 @@ namespace PM
 {
 	public class CaseHandler
 	{
+		public bool IsCasesRunning;
 		public int numberOfCases = 1;
 
-		public bool AllCasesCompleted = false;
+		public bool AllCasesCompleted;
 		public int CurrentCase = 0;
 
 		public CaseHandler(int numOfCases)
@@ -27,8 +27,6 @@ namespace PM
 
 		public void SetCurrentCase(int caseNumber)
 		{
-			SetCaseSettings(caseNumber);
-
 			if (caseNumber != CurrentCase)
 			{
 				// currentCaseButtonUnpressed
@@ -44,33 +42,17 @@ namespace PM
 			// currentCaseButtonPressed
 			LevelModeButtons.Instance.SetCurrentCaseButtonState(LevelModeButtonState.Active);
 
+			LevelModeController.Instance.SwitchToCaseMode();
+
 			// Call every implemented event
 			foreach (var ev in UISingleton.FindInterfaces<IPMCaseSwitched>())
 				ev.OnPMCaseSwitched(CurrentCase);
 		}
 
-		private void SetCaseSettings(int caseNumber)
-		{
-			if (Main.Instance.LevelData.cases != null && Main.Instance.LevelData.cases.Any())
-			{
-				var caseSettings = Main.Instance.LevelData.cases[caseNumber].caseSettings;
-
-				if (caseSettings == null)
-				{
-					PMWrapper.preCode = "";
-					return;
-				}
-
-				if (!String.IsNullOrEmpty(caseSettings.precode))
-					PMWrapper.preCode = caseSettings.precode;
-
-				if (caseSettings.walkerStepTime > 0)
-					PMWrapper.walkerStepTime = caseSettings.walkerStepTime;
-			}
-		}
-
 		public void RunCase(int caseNumber)
 		{
+			IsCasesRunning = true;
+
 			CaseFlash.Instance.HideFlash();
 			if (numberOfCases > 1)
 				CaseFlash.Instance.ShowNewCaseFlash(CurrentCase, true);
@@ -88,6 +70,7 @@ namespace PM
 
 		public void CaseFailed()
 		{
+			IsCasesRunning = false;
 			LevelModeButtons.Instance.SetCurrentCaseButtonState(LevelModeButtonState.Failed);
 		}
 
@@ -111,6 +94,7 @@ namespace PM
 
 			if (CurrentCase >= numberOfCases)
 			{
+				IsCasesRunning = false;
 				AllCasesCompleted = true;
 				PMWrapper.SetLevelCompleted();
 				yield break;

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using UnityEngine;
 
 
@@ -36,10 +35,13 @@ namespace PM
 		public void InitSandboxMode()
 		{
 			LevelMode = LevelMode.Sandbox;
-			SetSandboxSettings();
-
 			LevelModeButtons.Instance.SetSandboxButtonState(LevelModeButtonState.Active);
 			LevelModeButtons.Instance.SetCaseButtonsToDefault();
+
+			Main.Instance.SetSettings();
+
+			foreach (var ev in UISingleton.FindInterfaces<IPMSwitchedToSandbox>())
+				ev.OnPMSwitchedToSandbox();
 		}
 
 		public void InitCaseMode()
@@ -49,36 +51,17 @@ namespace PM
 			Main.Instance.CaseHandler.SetCurrentCase(0);
 		}
 
+		public void SwitchToCaseMode()
+		{
+			LevelMode = LevelMode.Case;
+			Main.Instance.SetSettings();
+		}
+
 		public void StartCorrection()
 		{
 			CorrectProgramPanel.SetActive(false);
 			InitCaseMode();
 			Main.Instance.CaseHandler.RunCase(0);
-		}
-
-		public void SetSandboxSettings()
-		{
-			if (Main.Instance.LevelData.sandbox != null)
-			{
-				var sandboxSettings = Main.Instance.LevelData.sandbox.sandboxSettings;
-
-				if (sandboxSettings == null)
-				{
-					PMWrapper.preCode = "";
-					return;
-				}
-
-				if (!String.IsNullOrEmpty(sandboxSettings.precode))
-					PMWrapper.preCode = sandboxSettings.precode;
-
-				if (sandboxSettings.walkerStepTime > 0)
-					PMWrapper.walkerStepTime = sandboxSettings.walkerStepTime;
-			}
-			else
-			{
-				print("Hittar inga settings");
-				PMWrapper.preCode = "";
-			}
 		}
 
 		public void OnPMCompilerStopped(HelloCompiler.StopStatus status)
@@ -98,6 +81,12 @@ namespace PM
 			{
 				if (LevelMode == LevelMode.Case)
 					Main.Instance.CaseHandler.CaseFailed();
+			}
+
+			if (status == HelloCompiler.StopStatus.UserForced)
+			{
+				if (LevelMode == LevelMode.Case)
+					Main.Instance.CaseHandler.IsCasesRunning = false;
 			}
 		}
 

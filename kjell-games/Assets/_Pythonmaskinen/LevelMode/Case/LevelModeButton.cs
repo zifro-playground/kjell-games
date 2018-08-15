@@ -4,7 +4,7 @@ using PM;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CaseButton : MonoBehaviour
+public class LevelModeButton : MonoBehaviour
 {
 	[Header("Button states")]
 	public Sprite Default;
@@ -36,7 +36,7 @@ public class CaseButton : MonoBehaviour
 
 	public void SwitchToCase(int caseNumber)
 	{
-		if (PMWrapper.IsCompilerRunning || PMWrapper.IsCompilerUserPaused)
+		if (PMWrapper.IsCompilerRunning || PMWrapper.IsCompilerUserPaused || PMWrapper.IsCasesRunning)
 			return;
 
 		LevelModeButtons.Instance.SetSandboxButtonToDefault();
@@ -46,6 +46,9 @@ public class CaseButton : MonoBehaviour
 
 	public void SwitchToSandbox()
 	{
+		if (PMWrapper.IsCompilerRunning || PMWrapper.IsCompilerUserPaused || PMWrapper.IsCasesRunning)
+			return;
+
 		LevelModeController.Instance.InitSandboxMode();
 		SetButtonActive();
 	}

@@ -158,18 +158,12 @@
 						"taskDescription": {
 							"header": "Skriv ett program som testar om ett tal är jämnt delbarhet med 3",
 							"body": "Programmet ska låta användaren mata in ett tal, och sedan svara om talet är jämnt delbart med 3 eller inte.\n\n<b>Resultat (exempel):</b>\n\nP:   Skriv ett tal\nA:   11\nP:   11 är inte jämnt delbart med 3"
-						}
+						},
+						"preCode": "y = 3"
 					},
-					"sandbox": {
-						"sandboxSettings": {
-							"preCode": "y = 3"
-						}
-					},
+					"sandbox": {},
 					"cases": [
 						{
-							"caseSettings": {
-								"preCode": "y = 3"
-							},
 							"caseDefinition": {
 								"test": {
 									"input": [ "12" ],
@@ -178,9 +172,6 @@
 							}
 						},
 						{
-							"caseSettings": {
-								"preCode": "y = 3"
-							},
 							"caseDefinition": {
 								"test": {
 									"input": [ "23" ],
@@ -189,9 +180,6 @@
 							}
 						},
 						{
-							"caseSettings": {
-								"preCode": "y = 3"
-							},
 							"caseDefinition": {
 								"test": {
 									"input": [ "17541" ],
