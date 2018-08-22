@@ -142,7 +142,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som testar om ett tal är jämnt delbart med 3",
-							"body": "Programmet ska låta användaren mata in ett tal, och sedan svara antingen \"... är jämnt delbart med 3\" eller \"... är inte jämnt delbart med 3\".\n\n<b>Resultat (exempel):</b>\n\nP:   Skriv ett tal\nA:   11\nP:   11 är inte jämnt delbart med 3\n\n <i>Tips</i>: Om ett tal är jämnt delbart med 3, så betyder det att talet dividerat med 3 är ett heltal."
+							"body": "Programmet ska låta användaren mata in ett tal, och sedan svara antingen \"... är jämnt delbart med 3\" eller \"... är inte jämnt delbart med 3\".\n\n<b>Resultat (exempel):</b>\n\nP:   Skriv ett tal\nA:   11\nP:   11 är inte jämnt delbart med 3\n\n Tips: Om ett tal är jämnt delbart med 3, så betyder det att talet dividerat med 3 är ett heltal."
 						}
 					},
 					"sandbox": {},
@@ -246,8 +246,8 @@
 				{   "id": "SEQEO",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "För alla tal mellan 0 och 15, skriv ut om talet är jämnt eller udda.",
-							"body": "Om talet är jämnt ska programmet skriva ut \"... är ett jämnt tal\" och om talet är udda ska programmet skriva ut \"... är ett udda tal\". <b>Resultat (exempel):</b>\n\nP:   0 är ett jämnt tal\nP:   1 är ett udda tal\nP:   2 är ett jämnt tal\n...\nP:   15 är ett udda tal\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt."
+							"header": "För alla tal mellan 0 och 15, skriv ut om talet är jämnt eller udda",
+							"body": "Om talet är jämnt ska programmet skriva ut \"... är ett jämnt tal\" och om talet är udda ska programmet skriva ut \"... är ett udda tal\".\n\n<b>Resultat (exempel):</b>\n\nP:   0 är ett jämnt tal\nP:   1 är ett udda tal\nP:   2 är ett jämnt tal\n...\nP:   15 är ett udda tal\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt."
 						}
 					},
 					"cases": [
@@ -280,25 +280,25 @@
 				{   "id": "SEQD1",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "För alla tal mellan 0 och 70, skriv ut om talet är jämnt delbart med <b>7</b>.",
-							"body": "Om talet är delbart med 7, ska programmet skriva ut \"... är delbart med 7\", annars ingenting. <b>Resultat (exempel):</b>\n\nP:   0 är jämnt delbart med 7\nP:   7 är jämnt delbart med 7\nP:   14 är jämnt delbart med 7\nP:   21 är jämnt delbart med 7\n...\nP:   70 är jämnt delbart med 7\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt delbart med 3."
+							"header": "För alla tal mellan 0 och 70, skriv ut om talet är jämnt delbart med <b>7</b>",
+							"body": "Om talet är jämnt delbart med 7, ska programmet skriva ut \"... är jämnt delbart med 7\", annars ingenting. \n\n<b>Resultat (exempel):</b>\n\nP:   0 är jämnt delbart med 7\nP:   7 är jämnt delbart med 7\nP:   14 är jämnt delbart med 7\nP:   21 är jämnt delbart med 7\n...\nP:   70 är jämnt delbart med 7"
 						}
 					},
 					"cases": [
 						{
 							"caseDefinition": {
 								"test": {
-                                    "output": [ "0  är jämnt delbart med 7",
-                                                "7  är jämnt delbart med 7",
-                                                "14  är jämnt delbart med 7",
-                                                "21  är jämnt delbart med 7",
-                                                "28  är jämnt delbart med 7",
-                                                "35  är jämnt delbart med 7",
-                                                "42  är jämnt delbart med 7",
-                                                "49  är jämnt delbart med 7",
-                                                "56  är jämnt delbart med 7",
-                                                "63  är jämnt delbart med 7",
-                                                "70  är jämnt delbart med 7"
+                                    "output": [ "0 är jämnt delbart med 7",
+                                                "7 är jämnt delbart med 7",
+                                                "14 är jämnt delbart med 7",
+                                                "21 är jämnt delbart med 7",
+                                                "28 är jämnt delbart med 7",
+                                                "35 är jämnt delbart med 7",
+                                                "42 är jämnt delbart med 7",
+                                                "49 är jämnt delbart med 7",
+                                                "56 är jämnt delbart med 7",
+                                                "63 är jämnt delbart med 7",
+                                                "70 är jämnt delbart med 7"
                                     ]
 								}
 							}
@@ -308,8 +308,8 @@
 				{   "id": "SEQD3",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ut alla tal från 0 till 25 som är jämnt delbara med <b>3</b> eller <b>4</b>.",
-							"body": "Om talet är jämnt delbart med 3, ska programmet skriva ut \"... är jämnt delbart med 3\", och om det är jämnt delbart med 4, ska det skriva ut \"... är jämnt delbart med 4\". Om talet är delbart med både 3 och 4, ska programmet skriva ut båda meddelandena. Talen ska skrivas ut i ökande storleksordning.\n\n<b>Resultat (exempel):</b>\n\nP:   0\nP:   3\nP:   4\nP:   6\nP:   8\n...\nP:   20"
+							"header": "Skriv ut alla tal från 0 till 25 som är jämnt delbara med <b>3</b> eller <b>4</b>",
+							"body": "Om talet är jämnt delbart med 3 eller 4, ska programmet skriva ut antingen \"... är jämnt delbart med 3\" eller \"... är jämnt delbart med 4\". Om talet är delbart med både 3 och 4, ska programmet skriva ut båda meddelandena. Talen ska skrivas ut i ökande storleksordning.\n\n<b>Resultat (exempel):</b>\n\nP:   0 är jämnt delbart med 3\nP:   0 är jämnt delbart med 4\nP:   3 är jämnt delbart med 3\nP:   4 är jämnt delbart med 4\nP:   6 är jämnt delbart med 3\n...\nP:   24 är jämnt delbart med 4"
 						}
 					},
 					"cases": [
@@ -317,6 +317,7 @@
 							"caseDefinition": {
 								"test": {
                                     "output": [ "0 är jämnt delbart med 3",
+																								"0 är jämnt delbart med 4",
                                                 "3 är jämnt delbart med 3",
                                                 "4 är jämnt delbart med 4",
                                                 "6 är jämnt delbart med 3",
@@ -344,7 +345,7 @@
 					"levelSettings": {
 						"startCode": "svar = input(\"Skriv talet att kolla delbarhet med\")\nx = int(svar)\nfor i in range(21): \n\tkvot = x/(i+1)\n\tif kvot == round(kvot):\n\t\tprint(i+1)",
 						"taskDescription": {
-                            "header": "Låt användaren mata in ett tal, och skriv sen ut alla tal mellan 1 och det talet som talet går att dela jämnt med.",
+                            "header": "Låt användaren mata in ett tal, och skriv sen ut alla tal mellan 1 och det talet som talet går att dela jämnt med",
 							"body": "Användaren ska välja ett tal, och sedan ska programmet skriva ut alla tal mellan 1 och det talet som användarens tal går att dela jämnt med.\n\n<b>Resultat (exempel):</b>\n\nP:   Skriv ett tal\nA:   24\nP:   1\nP:   2\nP:   3\n...\nP:   12\nP:   24"
 						}
 					},
@@ -379,7 +380,7 @@
 				{   "id": "SEQD4",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> och <b>2</b> från 0 till 30.",
+							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> och <b>2</b> från 0 till 30",
 							"body": "Du ska skriva ut talen i ökande storleksordning. <b>Resultat (exempel):</b>\n\nP:   0\nP:   6\n...\nP:   30\n\nTips: Du kan skapa en for-slinga och sen i varje varv kolla om talet är jämnt delbart med 3, och om det är det, kolla om det är delbart med 2."
 						}
 					},
@@ -396,7 +397,7 @@
 				{   "id": "SEQD5",
 					"levelSettings": {
 						"taskDescription": {
-							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> men inte med <b>2</b> från 0 till 30.",
+							"header": "Skriv ut alla tal som är jämnt delbara med <b>3</b> men inte med <b>2</b> från 0 till 30",
 							"body": "Du ska skriva ut talen i ökande storleksordning. <b>Resultat (exempel):</b>\n\nP:   3\nP:   9\n...\nP:   27"
 						}
 					},
