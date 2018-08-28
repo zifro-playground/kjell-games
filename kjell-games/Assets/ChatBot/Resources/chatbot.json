@@ -453,7 +453,7 @@
                             "caseDefinition": {
 								"test": {
                                     "input": [ "Mackor med jordnötssmör och lingonsylt" ],
-									"output": [ "Vad gott! Jag åt också Mackor med jordnötssmör och lingonsylt idag!" ]
+									"output": [ "Jag åt också Mackor med jordnötssmör och lingonsylt idag!" ]
 								}
 							}
 						},
@@ -461,7 +461,7 @@
                             "caseDefinition": {
 								"test": {
                                     "input": [ "3 knäckebröd med ägg" ],
-									"output": [ "Vad gott! Jag åt också 3 knäckebröd med ägg idag!" ]
+									"output": [ "Jag åt också 3 knäckebröd med ägg idag!" ]
 								}
 							}
 						}
@@ -471,7 +471,7 @@
 					"levelSettings": {
 						"taskDescription": {
 							"header": "Skriv ett program som frågar användaren vad den åt till frukost.",
-                            "body": "Om användaren skriver \"Inget\" ska programmet svara \":-(\", annars ska du svara som tidigare \"Vad gott! Jag åt också ... idag!\". När du kör programmet ska det se ut exakt som nedan, fast med olika frukosträtter beroende på vad användaren matar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Inget\nP:   :-(\n\n\n <i>(P står för programmet, A står för användaren)</i>"
+                            "body": "Om användaren skriver \"Inget\" ska programmet svara \":-(\", annars ska du svara som tidigare \"Jag åt också ... idag!\". När du kör programmet ska det se ut exakt som nedan, fast med olika frukosträtter beroende på vad användaren matar in.\n\n <b>Resultat (exempel):</b>\n\nP:   Vad åt du till frukost idag?\nA:   Inget\nP:   :-(\n\n\n <i>(P står för programmet, A står för användaren)</i>"
 						}
 					},
                     "sandbox": {},
@@ -479,8 +479,8 @@
                         {
                             "caseDefinition": {
 								"test": {
-                                    "input": [ "Havregrynsgröt" ],
-									"output": [ "Vad gott! Jag åt också Havregrynsgröt idag!" ]
+                                    "input": [ "Yoghurt" ],
+									"output": [ "Jag åt också Yoghurt idag!" ]
 								}
 							}
                         },
@@ -496,7 +496,7 @@
                             "caseDefinition": {
 								"test": {
                                     "input": [ "5 mackor med ost" ],
-									"output": [ "Vad gott! Jag åt också 5 mackor med ost idag!" ]
+									"output": [ "Jag åt också 5 mackor med ost idag!" ]
 								}
 							}
 						}

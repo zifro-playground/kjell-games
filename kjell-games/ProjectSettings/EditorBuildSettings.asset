@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Calculator/Scenes/Scene1.unity
     guid: b4a5e230240dc07469ea5f5e450506d0
-  - enabled: 0
+  - enabled: 1
     path: Assets/ChatBot/Scenes/MainScene.unity
     guid: be0e240395a46425d96f17f155240297
-  - enabled: 0
+  - enabled: 1
     path: Assets/ChatBot/Scenes/Scene1.unity
     guid: a3532a98fb90647309395e33955a870e
   - enabled: 0
@@ -23,10 +23,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/GuessNumber/Scenes/Scene1.unity
     guid: 43d92b9e359f3fc418087aa9137358a3
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sequences/Scenes/MainScene.unity
     guid: d70985279c6e4964a9a0e49602f8a1eb
-  - enabled: 1
+  - enabled: 0
     path: Assets/Sequences/Scenes/Scene1.unity
     guid: 81de55dea64e3d544856f70e7c585012
   - enabled: 0
