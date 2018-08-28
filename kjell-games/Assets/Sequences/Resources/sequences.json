@@ -343,7 +343,7 @@
                         "rowLimit": 10,
 						"taskDescription": {
 							"header": "Gör ett program som skriver ut denna talföljd:\n 0, 1, 4, 9, 16, ..., 100",
-                            "body": "De sista två nivåerna har lite annorlunda mönster. Kan du hitta dem?\n\n<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   4\nP:   9\nP:   16\n...\nP:   100"
+                            "body": "Den sista nivån har lite annorlunda mönster. Kan du hitta det?\n\n<b>Resultat:</b>\n\nP:   0\nP:   1\nP:   4\nP:   9\nP:   16\n...\nP:   100"
 						}
 					},
 					"cases": [
